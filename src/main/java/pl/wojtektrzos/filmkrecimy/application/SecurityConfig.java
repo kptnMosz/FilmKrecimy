@@ -33,10 +33,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication().dataSource(dataSource)
-                .passwordEncoder(passwordEncoder())
-                .withUser("admin")
-                .password(passwordEncoder().encode("dupa"))
-                .roles("ADMIN", "USER");
+                .passwordEncoder(passwordEncoder());
+//                        .withUser("pan")
+//                .password(passwordEncoder().encode("dupa"))
+//                .roles("USER");
+//                .withUser("admin")
+//                .password(passwordEncoder().encode("dupa"))
+//                .roles("ADMIN", "USER");
     }
 
     @Bean
