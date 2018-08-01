@@ -16,5 +16,5 @@ public class Authority {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
-    private String authority;
+    private String name;
 }

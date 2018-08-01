@@ -1,0 +1,333 @@
+-----=======2018-08-01T16:01:23.578679======---------
+place: plan
+message: nasza mapa:
+data: {2018-07-31=[PlanItem{id=2, name='Janusz'}], 2018-08-05=[PlanItem{id=2, name='Janusz'}, PlanItem{id=3, name='Grazyna'}, PlanItem{id=4, name='Eneasz'}], 2018-08-04=[PlanItem{id=3, name='Grazyna'}], 2018-08-03=[PlanItem{id=2, name='Janusz'}, PlanItem{id=3, name='Grazyna'}]}
+-----=======2018-08-01T16:01:23.579377======---------
+place: plan
+message: nasze prerekwizyty:
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:01:23.579787======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:01:23.582094======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:01:23.582469======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:01:23.583483======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=null}
+-----=======2018-08-01T16:01:23.583688======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=null}
+-----=======2018-08-01T16:01:23.583741======---------
+place: plan
+message: 2018-07-31jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-07-31
+{}
+-----=======2018-08-01T16:01:23.583811======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:01:23.583916======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:01:23.584019======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:01:23.585036======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}}
+-----=======2018-08-01T16:01:23.585101======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}}
+-----=======2018-08-01T16:01:23.585143======---------
+place: plan
+message: 2018-08-03jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-03
+{2018-07-31=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]}
+-----=======2018-08-01T16:01:23.585198======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:01:23.585808======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:01:23.585873======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:01:23.586345======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}}
+-----=======2018-08-01T16:01:23.586395======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}}
+-----=======2018-08-01T16:01:23.586436======---------
+place: plan
+message: 2018-08-04jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-04
+{2018-07-31=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}], 2018-08-03=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]}
+-----=======2018-08-01T16:01:23.586480======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:01:23.586530======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:01:23.587720======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=PlanItem{id=4, name='Eneasz'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}}
+-----=======2018-08-01T16:01:23.587782======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: []
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=PlanItem{id=4, name='Eneasz'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}}
+-----=======2018-08-01T16:01:23.587821======---------
+place: plan
+message: nasza mapa:
+data: {2018-07-31=[], 2018-08-05=[], 2018-08-04=[], 2018-08-03=[]}
+-----=======2018-08-01T16:01:23.587855======---------
+place: plan
+message: 2018-08-05mamy sukces: jestem w if sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-05
+-----=======2018-08-01T16:07:51.449962======---------
+place: plan
+message: nasza mapa:
+data: {2018-07-31=[PlanItem{id=2, name='Janusz'}], 2018-08-05=[PlanItem{id=2, name='Janusz'}, PlanItem{id=3, name='Grazyna'}, PlanItem{id=4, name='Eneasz'}], 2018-08-04=[PlanItem{id=3, name='Grazyna'}], 2018-08-03=[PlanItem{id=2, name='Janusz'}, PlanItem{id=3, name='Grazyna'}]}
+-----=======2018-08-01T16:07:51.450630======---------
+place: plan
+message: nasze prerekwizyty:
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:07:51.451038======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:07:51.452953======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:07:51.453157======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:07:51.454070======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:07:51.454266======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:07:51.454320======---------
+place: plan
+message: 2018-07-31jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-07-31
+{}
+-----=======2018-08-01T16:07:51.454376======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:07:51.454431======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:07:51.454493======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:07:51.455591======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:07:51.455679======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:07:51.455755======---------
+place: plan
+message: 2018-08-03jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-03
+{2018-07-31=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]}
+-----=======2018-08-01T16:07:51.455803======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:07:51.456368======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:07:51.456427======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:07:51.457186======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=null}
+-----=======2018-08-01T16:07:51.457240======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=null}
+-----=======2018-08-01T16:07:51.457280======---------
+place: plan
+message: 2018-08-04jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-04
+{2018-07-31=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}], 2018-08-03=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]}
+-----=======2018-08-01T16:07:51.457330======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:07:51.457382======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:07:51.458734======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=PlanItem{id=4, name='Eneasz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:07:51.458800======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: []
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=PlanItem{id=4, name='Eneasz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:07:51.458839======---------
+place: plan
+message: nasza mapa:
+data: {2018-07-31=[], 2018-08-05=[], 2018-08-04=[], 2018-08-03=[]}
+-----=======2018-08-01T16:07:51.458873======---------
+place: plan
+message: 2018-08-05mamy sukces: jestem w if sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-05
+-----=======2018-08-01T16:12:33.521887======---------
+place: plan
+message: nasza mapa:
+data: {2018-07-31=[PlanItem{id=2, name='Janusz'}], 2018-08-05=[PlanItem{id=2, name='Janusz'}, PlanItem{id=3, name='Grazyna'}, PlanItem{id=4, name='Eneasz'}], 2018-08-04=[PlanItem{id=3, name='Grazyna'}], 2018-08-03=[PlanItem{id=2, name='Janusz'}, PlanItem{id=3, name='Grazyna'}]}
+-----=======2018-08-01T16:12:33.522748======---------
+place: plan
+message: nasze prerekwizyty:
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:12:33.523467======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:12:33.527348======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:12:33.527795======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:12:33.528731======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:12:33.528972======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=null, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:12:33.529028======---------
+place: plan
+message: 2018-07-31jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-07-31
+{}
+-----=======2018-08-01T16:12:33.529082======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:12:33.529150======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:12:33.529218======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:12:33.530029======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:12:33.530097======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:12:33.530140======---------
+place: plan
+message: 2018-08-03jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-03
+{2018-07-31=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]}
+-----=======2018-08-01T16:12:33.530200======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:12:33.531008======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:12:33.531072======---------
+place: preqByRole
+message: nie znaleziono elementu w zbiorze
+data: []
+-----=======2018-08-01T16:12:33.531590======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=null}
+-----=======2018-08-01T16:12:33.531666======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}]
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=null, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=null}
+-----=======2018-08-01T16:12:33.531711======---------
+place: plan
+message: 2018-08-04jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-04
+{2018-07-31=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}], 2018-08-03=[Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]}
+-----=======2018-08-01T16:12:33.531771======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=1, discriminator='ID', fieldValue='2'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T16:12:33.531821======---------
+place: preqByRole
+message: zrzucam kolekcje prerequisits nie po ID
+data: [Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}]
+-----=======2018-08-01T16:12:33.533226======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=PlanItem{id=4, name='Eneasz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:12:33.533298======---------
+place: plan
+message: mamy taki missing/full map teraz:
+data: []
+{Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}=PlanItem{id=4, name='Eneasz'}, Prerequisite{id=2, discriminator='ID', fieldValue='3'}=PlanItem{id=3, name='Grazyna'}, Prerequisite{id=1, discriminator='ID', fieldValue='2'}=PlanItem{id=2, name='Janusz'}}
+-----=======2018-08-01T16:12:33.533346======---------
+place: plan
+message: nasza mapa:
+data: {2018-07-31=[], 2018-08-05=[], 2018-08-04=[], 2018-08-03=[]}
+-----=======2018-08-01T16:12:33.533381======---------
+place: plan
+message: 2018-08-05mamy sukces: jestem w if sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-05

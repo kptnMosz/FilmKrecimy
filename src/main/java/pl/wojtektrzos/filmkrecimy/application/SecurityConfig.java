@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import pl.wojtektrzos.filmkrecimy.service.SpringDataUserDetailsService;
 
 import javax.sql.DataSource;
 
@@ -30,20 +31,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().formLogin();
     }
 
-    @Override
-    public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.jdbcAuthentication().dataSource(dataSource)
-                .passwordEncoder(passwordEncoder());
-//                        .withUser("pan")
+//    @Override
+//    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.jdbcAuthentication().dataSource(dataSource)
+//                .passwordEncoder(passwordEncoder())
+//                        .withUser("panczy")
 //                .password(passwordEncoder().encode("dupa"))
 //                .roles("USER");
 //                .withUser("admin")
 //                .password(passwordEncoder().encode("dupa"))
 //                .roles("ADMIN", "USER");
-    }
+//    }
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+    @Bean
+    public SpringDataUserDetailsService customUserDetailsService() {
+        return new SpringDataUserDetailsService();
     }
 }
