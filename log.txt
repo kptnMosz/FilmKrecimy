@@ -1,0 +1,55 @@
+-----=======2018-08-01T11:19:05.780770======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T11:19:05.781417======---------
+place: checkIfMeetsPrerequisits
+message: i jeszcze pelna lista
+data: [Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T11:19:05.781722======---------
+place: checkIfMeetsPrerequisits
+message: nie znaleziono elementu w zbiorze
+data: [2]
+-----=======2018-08-01T11:19:05.782802======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=2, discriminator='ID', fieldValue='3'}=null}
+-----=======2018-08-01T11:19:05.783024======---------
+place: plan
+message: jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-07-31
+{}
+-----=======2018-08-01T11:19:05.783084======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T11:19:05.783124======---------
+place: checkIfMeetsPrerequisits
+message: i jeszcze pelna lista
+data: [Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T11:19:05.783177======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=2, discriminator='ID', fieldValue='3'}=3}
+-----=======2018-08-01T11:19:05.783221======---------
+place: plan
+message: jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-04
+{2018-07-31=[Prerequisite{id=2, discriminator='ID', fieldValue='3'}]}
+-----=======2018-08-01T11:19:05.783267======---------
+place: checkIfMeetsPrerequisits
+message: zrzucam kolekcje prerequisiits by ID
+data: [Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T11:19:05.783303======---------
+place: checkIfMeetsPrerequisits
+message: i jeszcze pelna lista
+data: [Prerequisite{id=2, discriminator='ID', fieldValue='3'}]
+-----=======2018-08-01T11:19:05.783346======---------
+place: checkIfMeetsPrerequisits
+message: zwracam
+data: {Prerequisite{id=2, discriminator='ID', fieldValue='3'}=3}
+-----=======2018-08-01T11:19:05.783392======---------
+place: plan
+message: jestem w else sprawdzajacym czy data spenia wszystkie wymogi
+data: 2018-08-03
+{2018-07-31=[Prerequisite{id=2, discriminator='ID', fieldValue='3'}], 2018-08-04=[]}

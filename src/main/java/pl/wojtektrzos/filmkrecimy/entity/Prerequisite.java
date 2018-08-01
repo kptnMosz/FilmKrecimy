@@ -37,4 +37,13 @@ public class Prerequisite {
     public void setFieldValue(String fieldValue) {
         this.fieldValue = fieldValue;
     }
+
+    @Override
+    public String toString() {
+        return "Prerequisite{" +
+                "id=" + id +
+                ", discriminator='" + discriminator + '\'' +
+                ", fieldValue='" + fieldValue + '\'' +
+                '}';
+    }
 }

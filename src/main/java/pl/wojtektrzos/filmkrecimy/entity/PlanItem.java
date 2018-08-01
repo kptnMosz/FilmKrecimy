@@ -18,8 +18,10 @@ public class PlanItem {
     private String name;
     @ManyToMany
     private List<PlanItemRole> planItemRoles;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<EventDate> eventDates;
+
+    private LocalDate doneBy;
 
     public List<Prerequisite> getPrerequisites() {
         return prerequisites;

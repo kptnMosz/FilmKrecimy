@@ -10,12 +10,46 @@ public class EventDate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private LocalDate date;
-    @ManyToOne
-    private PlanItem planItem;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private PlanItem occupiedBy;
 
+    public EventDate() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
 
+    public PlanItem getOccupiedBy() {
+        return occupiedBy;
+    }
 
+    public long getOccupiedById() {
+        return occupiedBy.getId();
+    }
+
+    public void setOccupiedBy(PlanItem occupiedBy) {
+        this.occupiedBy = occupiedBy;
+    }
+
+    @Override
+    public String toString() {
+        return "EventDate{" +
+                "date=" + date +
+                "ocupied by=" + occupiedBy.getId() +
+                '}';
+    }
 }
