@@ -4,6 +4,8 @@ package pl.wojtektrzos.filmkrecimy.entity;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name="plan_items")
@@ -32,7 +34,13 @@ public class PlanItem {
     }
 
     public List<PlanItemRole> getPlanItemRoles() {
+
         return planItemRoles;
+    }
+    public List<String> getPlanItemRoleNames() {
+        return planItemRoles.stream()
+                .map(r->r.getName())
+                .collect(Collectors.toList());
     }
 
     public void setPlanItemRoles(List<PlanItemRole> planItemRoles) {
@@ -73,5 +81,13 @@ public class PlanItem {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "PlanItem{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

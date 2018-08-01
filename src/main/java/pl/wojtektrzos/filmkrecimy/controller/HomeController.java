@@ -15,7 +15,7 @@ public class HomeController {
     @ResponseBody
     public String siema(){
 
-        PlanItem planItem = planItemRepository.getOne(1l);
-        return planItem.getId()+"";
+        PlanItem planItem = planItemRepository.getOne(2l);
+        return planItem.getPlanItemRoleNames()+"";
     }
 }
