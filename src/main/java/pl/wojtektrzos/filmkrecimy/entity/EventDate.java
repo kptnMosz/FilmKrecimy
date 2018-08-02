@@ -1,8 +1,13 @@
 package pl.wojtektrzos.filmkrecimy.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "event_dates")
 public class EventDate {
@@ -12,6 +17,10 @@ public class EventDate {
     private LocalDate date;
     @ManyToOne(fetch = FetchType.LAZY)
     private PlanItem occupiedBy;
+    @OneToOne
+    private Prerequisite prerequisite;
+    @ManyToOne
+    private PlanItem ownerPlanItem;
 
     public EventDate() {
     }

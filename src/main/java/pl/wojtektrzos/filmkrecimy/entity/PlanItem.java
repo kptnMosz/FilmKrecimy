@@ -23,7 +23,7 @@ public class PlanItem {
     private String name;
     @ManyToMany
     private List<PlanItemRole> planItemRoles;
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "ownerPlanItem")
     private List<EventDate> eventDates;
 
     @Getter
@@ -34,6 +34,10 @@ public class PlanItem {
     @Setter
     private LocalDate availibleBefore;
 
+
+    public void notifyMe(PlanItem who, String message){
+    //todo ewentualne powiadomienia
+    }
 
     public List<Prerequisite> getPrerequisites() {
         return prerequisites;

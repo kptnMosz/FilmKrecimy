@@ -1,191 +1,154 @@
------=======2018-08-02T11:06:04.862291======---------
-place: -=eventplanner 33 plan=-
-message: wypełniłem mape danymi per availibility
-data: {2018-07-31=[PlanItem{id=2, name='Janusz'}
-<br />], 2018-08-05=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />], 2018-08-04=[PlanItem{id=3, name='Grazyna'}
-<br />], 2018-08-03=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />]}
------=======2018-08-02T11:06:04.863646======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==73==-
-message: jestem w funkcji
-data: [PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />]
------=======2018-08-02T11:06:04.863932======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==77==-
-message: userwziety pod uwage fo availible after
-data: PlanItem{id=5, name='Emanuel'}
+-----=======2018-08-02T13:52:46.002391======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />=PlanItem{id=5, name='Emanuel'}
+<br />, Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />=PlanItem{id=3, name='Grazyna'}
+<br />, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=4, name='Eneasz'}
+<br />, Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />=PlanItem{id=2, name='Janusz'}
+<br />}
+-----=======2018-08-02T13:52:46.003332======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />
+-----=======2018-08-02T13:56:25.494447======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />=PlanItem{id=3, name='Grazyna'}
+<br />, Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />=PlanItem{id=2, name='Janusz'}
+<br />, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=4, name='Eneasz'}
+<br />, Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />=PlanItem{id=5, name='Emanuel'}
+<br />}
+-----=======2018-08-02T13:56:25.597616======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-07-31ocupied by=1}, EventDate{date=2018-08-03ocupied by=1}]
+-----=======2018-08-02T13:56:25.597768======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />
+-----=======2018-08-02T13:56:25.621861======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />
+-----=======2018-08-02T13:56:25.627768======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />
+-----=======2018-08-02T13:56:25.633099======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />
+-----=======2018-08-02T13:56:26.823697======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />=PlanItem{id=2, name='Janusz'}
+<br />, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=4, name='Eneasz'}
+<br />, Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />=PlanItem{id=3, name='Grazyna'}
+<br />, Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />=PlanItem{id=5, name='Emanuel'}
+<br />}
+-----=======2018-08-02T13:56:26.826024======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-05ocupied by=1}, EventDate{date=2018-08-05ocupied by=1}, EventDate{date=2018-08-05ocupied by=1}]
+-----=======2018-08-02T13:56:26.826115======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />
+-----=======2018-08-02T13:56:26.833283======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />
+-----=======2018-08-02T13:56:26.838486======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />
+-----=======2018-08-02T13:56:26.842301======---------
+place: updateEvent---===30===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />
+-----=======2018-08-02T13:58:32.085289======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />=PlanItem{id=5, name='Emanuel'}
+<br />, Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />=PlanItem{id=3, name='Grazyna'}
+<br />, Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />=PlanItem{id=2, name='Janusz'}
+<br />, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=4, name='Eneasz'}
+<br />}
+-----=======2018-08-02T13:58:32.151092======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-05ocupied by=1}, EventDate{date=2018-08-05ocupied by=1}, EventDate{date=2018-08-05ocupied by=1}]
+-----=======2018-08-02T13:58:32.151214======---------
+place: updateEvent---===37===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />
+-----=======2018-08-02T13:58:32.165577======---------
+place: updateEvent---===38===---
+message: przed bledem:
+data: PlanItem{id=1, name='scena 1'}
+<br /> 
+null
+-----=======2018-08-02T13:59:58.507415======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />=PlanItem{id=2, name='Janusz'}
+<br />, Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />=PlanItem{id=5, name='Emanuel'}
+<br />, Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />=PlanItem{id=3, name='Grazyna'}
+<br />, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=4, name='Eneasz'}
+<br />}
+-----=======2018-08-02T13:59:58.607517======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: []
+-----=======2018-08-02T13:59:58.607628======---------
+place: updateEvent---===37===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />
+-----=======2018-08-02T14:00:15.696695======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />=PlanItem{id=5, name='Emanuel'}
+<br />, Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />=PlanItem{id=3, name='Grazyna'}
+<br />, Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />=PlanItem{id=2, name='Janusz'}
+<br />, Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=4, name='Eneasz'}
+<br />}
+-----=======2018-08-02T14:00:15.699827======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: []
+-----=======2018-08-02T14:00:15.699920======---------
+place: updateEvent---===37===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />
+-----=======2018-08-02T14:00:15.705170======---------
+place: updateEvent---===38===---
+message: przed bledem:
+data: PlanItem{id=1, name='scena 1'}
+<br /> 
+null
+asset: PlanItem{id=5, name='Emanuel'}
 <br />
------=======2018-08-02T11:06:04.864502======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==99==-
-message: koncze obsluge usera
-data: min: 2018-08-05 max: 2018-08-05
------=======2018-08-02T11:06:04.864622======---------
-place: -=eventplanner 36 plan=-
-message: wypełniłem mape danymi per beforAfter
-data: {2018-07-31=[PlanItem{id=2, name='Janusz'}
-<br />], 2018-08-05=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />], 2018-08-04=[PlanItem{id=3, name='Grazyna'}
-<br />], 2018-08-03=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />]}
------=======2018-08-02T11:06:44.199252======---------
-place: -=eventplanner 33 plan=-
-message: wypełniłem mape danymi per availibility
-data: {2018-07-31=[PlanItem{id=2, name='Janusz'}
-<br />], 2018-08-05=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />], 2018-08-04=[PlanItem{id=3, name='Grazyna'}
-<br />], 2018-08-03=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />]}
------=======2018-08-02T11:06:44.200892======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==73==-
-message: jestem w funkcji
-data: [PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />]
------=======2018-08-02T11:06:44.201495======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==77==-
-message: userwziety pod uwage fo availible after
-data: PlanItem{id=5, name='Emanuel'}
-<br />
------=======2018-08-02T11:06:47.322150======---------
-place: -=eventplanner 33 plan=-
-message: wypełniłem mape danymi per availibility
-data: {2018-07-31=[PlanItem{id=2, name='Janusz'}
-<br />], 2018-08-05=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />], 2018-08-04=[PlanItem{id=3, name='Grazyna'}
-<br />], 2018-08-03=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />]}
------=======2018-08-02T11:06:47.322419======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==73==-
-message: jestem w funkcji
-data: [PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />]
------=======2018-08-02T11:06:47.322616======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==77==-
-message: userwziety pod uwage fo availible after
-data: PlanItem{id=5, name='Emanuel'}
-<br />
------=======2018-08-02T11:08:07.613572======---------
-place: -=eventplanner 33 plan=-
-message: wypełniłem mape danymi per availibility
-data: {2018-07-31=[PlanItem{id=2, name='Janusz'}
-<br />], 2018-08-05=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />], 2018-08-04=[PlanItem{id=3, name='Grazyna'}
-<br />], 2018-08-03=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />]}
------=======2018-08-02T11:08:07.615176======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==73==-
-message: jestem w funkcji
-data: [PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />]
------=======2018-08-02T11:08:07.615780======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==77==-
-message: userwziety pod uwage fo availible after
-data: PlanItem{id=5, name='Emanuel'}
-<br />
------=======2018-08-02T11:08:07.616683======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==95==-
-message: koncze obsluge usera
-data: min: null max: 2018-08-05
------=======2018-08-02T11:08:07.616775======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==99==-
-message: koncze obsluge usera
-data: min: 2018-08-05 max: 2018-08-05
------=======2018-08-02T11:08:07.616912======---------
-place: -=eventplanner 36 plan=-
-message: wypełniłem mape danymi per beforAfter
-data: {2018-07-31=[PlanItem{id=2, name='Janusz'}
-<br />], 2018-08-05=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />], 2018-08-04=[PlanItem{id=3, name='Grazyna'}
-<br />], 2018-08-03=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />]}
------=======2018-08-02T11:10:20.091780======---------
-place: -=eventplanner 33 plan=-
-message: wypełniłem mape danymi per availibility
-data: {2018-07-31=[PlanItem{id=2, name='Janusz'}
-<br />], 2018-08-05=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />], 2018-08-04=[PlanItem{id=3, name='Grazyna'}
-<br />], 2018-08-03=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />]}
------=======2018-08-02T11:10:20.092771======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==73==-
-message: jestem w funkcji
-data: [PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />]
------=======2018-08-02T11:10:20.093116======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==77==-
-message: userwziety pod uwage fo availible after
-data: PlanItem{id=5, name='Emanuel'}
-<br />
------=======2018-08-02T11:10:20.094117======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==95==-
-message: koncze obsluge usera
-data: min: 2018-08-02 max: 2018-08-05
------=======2018-08-02T11:10:20.094216======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==99==-
-message: koncze obsluge usera
-data: min: 2018-08-02 max: 2018-08-05
------=======2018-08-02T11:10:20.094296======---------
-place: -=eventplanner 36 plan=-
-message: wypełniłem mape danymi per beforAfter
-data: {2018-07-31=[PlanItem{id=2, name='Janusz'}
-<br />], 2018-08-05=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />], 2018-08-04=[PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />], 2018-08-03=[PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />]}
------=======2018-08-02T11:46:45.831426======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==73==-
-message: jestem w funkcji
-data: [PlanItem{id=2, name='Janusz'}
-<br />, PlanItem{id=3, name='Grazyna'}
-<br />, PlanItem{id=4, name='Eneasz'}
-<br />, PlanItem{id=5, name='Emanuel'}
-<br />]
------=======2018-08-02T11:46:45.832446======---------
-place: fillDateMapWithItemsPerBeforeandAfter -==77==-
-message: userwziety pod uwage fo availible after
-data: PlanItem{id=5, name='Emanuel'}
-<br />
+-----=======2018-08-02T14:08:41.512300======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=4, name='Eneasz'}
+<br />, Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />=PlanItem{id=5, name='Emanuel'}
+<br />, Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />=PlanItem{id=3, name='Grazyna'}
+<br />, Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />=PlanItem{id=2, name='Janusz'}
+<br />}
+-----=======2018-08-02T14:08:41.618422======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: []
+-----=======2018-08-02T14:08:41.962359======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=3, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=4, name='Eneasz'}
+<br />, Prerequisite{id=2, discriminator='ID', fieldValue='3'}<br />=PlanItem{id=3, name='Grazyna'}
+<br />, Prerequisite{id=1, discriminator='ID', fieldValue='2'}<br />=PlanItem{id=2, name='Janusz'}
+<br />, Prerequisite{id=4, discriminator='ID', fieldValue='5'}<br />=PlanItem{id=5, name='Emanuel'}
+<br />}
+-----=======2018-08-02T14:08:41.966677======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-05ocupied by=1}, EventDate{date=2018-08-05ocupied by=1}, EventDate{date=2018-08-05ocupied by=1}]
