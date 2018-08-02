@@ -44,6 +44,6 @@ public class Prerequisite {
                 "id=" + id +
                 ", discriminator='" + discriminator + '\'' +
                 ", fieldValue='" + fieldValue + '\'' +
-                '}';
+                "}<br />";
     }
 }

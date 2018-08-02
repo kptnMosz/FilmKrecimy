@@ -13,7 +13,7 @@ import pl.wojtektrzos.filmkrecimy.service.EventPlanner;
 
 @Controller
 @RequestMapping("/test")
-@Secured({"ROLE_ADMIN", "ROLE_USER"})
+//@Secured({"ROLE_ADMIN", "ROLE_USER"})
 public class SortTestController {
 
     @Autowired

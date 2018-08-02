@@ -1,6 +1,9 @@
 package pl.wojtektrzos.filmkrecimy.entity;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
@@ -23,7 +26,14 @@ public class PlanItem {
     @OneToMany(fetch = FetchType.EAGER)
     private List<EventDate> eventDates;
 
-    private LocalDate doneBy;
+    @Getter
+    @Setter
+    private LocalDate availibleAfter;
+
+    @Getter
+    @Setter
+    private LocalDate availibleBefore;
+
 
     public List<Prerequisite> getPrerequisites() {
         return prerequisites;
@@ -88,6 +98,6 @@ public class PlanItem {
         return "PlanItem{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                '}';
+                "}\n<br />";
     }
 }
