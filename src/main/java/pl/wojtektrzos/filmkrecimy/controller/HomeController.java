@@ -15,9 +15,17 @@ public class HomeController {
     @Autowired
     PlanItemRepository planItemRepository;
 
+    @GetMapping("/main")
+    public String mainPage() {
+
+
+       return "siema";
+    }
+
+
     @GetMapping("/")
     @ResponseBody
-    public String siema() {
+    public String start() {
 
         PlanItem planItem = planItemRepository.getOne(2l);
         return planItem.getPlanItemRoleNames() + "";
@@ -30,4 +38,6 @@ public class HomeController {
     public String testusera(@AuthenticationPrincipal CurrentUser currentUser) {
         return currentUser.getUser().getUsername();
     }
+
+
 }

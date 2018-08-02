@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+@Getter
+@Setter
 @Entity
 @Table(name="plan_items")
 public class PlanItem {
@@ -25,7 +27,8 @@ public class PlanItem {
     private List<PlanItemRole> planItemRoles;
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "ownerPlanItem")
     private List<EventDate> eventDates;
-
+    @ManyToOne
+    private UserDetails owner;
     @Getter
     @Setter
     private LocalDate availibleAfter;
