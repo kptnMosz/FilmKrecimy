@@ -50,6 +50,8 @@ public class UserServiceImpl implements UserService {
         userDetailsRepository.save(userDetails);
         user.setDetails(userDetails);
         PlanItem mySelf = new PlanItem();
+        mySelf.setOwner(userDetails);
+        mySelf.setName(user.getUsername());
         planItemRepository.save(mySelf);
         userDetails.setPlanMyself(mySelf);
         userRepository.save(user);

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie</title>
+</head>
+<body>
+<form th:object="${movie}" method="post">
+    <fieldset>
+        <legend th:text="#{movie.editmovie.name}">nazwa</legend>
+        <input type="text" th:field="*{name}" th:readonly="${editable}!=true"/>
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">komunikat bledu</p></fieldset>
+    <input th:field="*{owner}" type="hidden"/>
+    <fieldset>
+        <legend th:text="#{movie.editmovie.desc}">opis</legend>
+        <textarea th:field="*{description}" th:readonly="${editable}!=true"></textarea></fieldset>
+    <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    <input th:if="${editable}" type="submit"/>
+</form>
+<table>
+    <tr>
+        <td colspan="2">
+            <form method="get" th:action="@{/movie/addSceene/{movieid}/(movieid=${movie.id})}" th:object="${movie}">
+                <button type="submit" th:text="#{movie.addsceene.button}">tekst guzika</button>
+            </form>
+        </td>
+    </tr>
+    <tr th:each="activity : ${activities}">
+        <td><a th:text="${activity.name}" th:href="@{/movie/editSceene/{sceeneId}/(sceeneId=${activity.id})}">link</a>
+        </td>
+        <td th:text="${activity.description}"></td>
+        <td><a th:href="@{/movie/observe/{activityId}/(activityId=${activity.id})}">join</a> </td>
+    </tr>
+</table>
+
+</body>
+</html>

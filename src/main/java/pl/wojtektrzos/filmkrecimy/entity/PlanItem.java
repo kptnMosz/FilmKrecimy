@@ -6,40 +6,44 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Getter
 @Setter
 @Entity
-@Table(name="plan_items")
+@Table(name = "plan_items")
 public class PlanItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @OneToMany
     private List<Prerequisite> prerequisites;
-    @ManyToMany
-    private List<PlanItem> observers;
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "plan_items_observers", joinColumns = @JoinColumn(name = "plan_item_id"),
+            inverseJoinColumns = @JoinColumn(name = "observers_id"))
+    private Set<PlanItem> observers;
     private String name;
+    @ManyToMany
+    private Set<Movie> movie;
     @ManyToMany
     private List<PlanItemRole> planItemRoles;
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "ownerPlanItem")
     private List<EventDate> eventDates;
     @ManyToOne
     private UserDetails owner;
-    @Getter
-    @Setter
+    @ManyToOne
+    private Activity activity;
     private LocalDate availibleAfter;
-
-    @Getter
-    @Setter
     private LocalDate availibleBefore;
 
 
-    public void notifyMe(PlanItem who, String message){
-    //todo ewentualne powiadomienia
+    public void notifyMe(PlanItem who, String message) {
+        //todo ewentualne powiadomienia
     }
 
     public List<Prerequisite> getPrerequisites() {
@@ -54,9 +58,10 @@ public class PlanItem {
 
         return planItemRoles;
     }
+
     public List<String> getPlanItemRoleNames() {
         return planItemRoles.stream()
-                .map(r->r.getName())
+                .map(r -> r.getName())
                 .collect(Collectors.toList());
     }
 
@@ -64,13 +69,15 @@ public class PlanItem {
         this.planItemRoles = planItemRoles;
     }
 
+    public void setPlanItemRoles(PlanItemRole planItemRole) {
+        this.planItemRoles = new ArrayList<>();
+        planItemRoles.add(planItemRole);
+    }
+
     public List<EventDate> getEventDates() {
         return eventDates;
     }
 
-    public void setEventDates(List<EventDate> eventDates) {
-        this.eventDates = eventDates;
-    }
 
     public String getName() {
         return name;
@@ -80,16 +87,11 @@ public class PlanItem {
         this.name = name;
     }
 
-    public List<PlanItem> getObservers() {
-        return observers;
-    }
-
-    public void setObservers(List<PlanItem> observers) {
-        this.observers = observers;
-    }
-
-
     public PlanItem() {
+    }
+
+    public void addPlanItemRole(PlanItemRole role) {
+        this.planItemRoles.add(role);
     }
 
     public long getId() {
@@ -98,6 +100,13 @@ public class PlanItem {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public void addObserver(PlanItem observer) {
+        if (this.observers == null) {
+            this.observers = new HashSet<>();
+        }
+        this.observers.add(observer);
     }
 
     @Override

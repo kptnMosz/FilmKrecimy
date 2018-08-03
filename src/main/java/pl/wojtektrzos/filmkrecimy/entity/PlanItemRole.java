@@ -1,7 +1,9 @@
 package pl.wojtektrzos.filmkrecimy.entity;
 
-import javax.persistence.*;
+import lombok.ToString;
 
+import javax.persistence.*;
+@ToString
 @Entity
 @Table(name="plan_item_roles")
 public class PlanItemRole {

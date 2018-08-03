@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+</head>
+<body>
+<form method="post" th:object="${movie}">
+    <input type="text" >
+    <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    <input th:if="${editable}" type="submit"/>
+</form>
+</body>
+</html>

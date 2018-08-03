@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Repository
@@ -28,5 +29,8 @@ public class UserDetails {
     private List<PlanItem> myAssets;
     @Email
     private String email;
+    private String foto;
+
+
 
 }

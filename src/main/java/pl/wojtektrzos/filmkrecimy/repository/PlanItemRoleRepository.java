@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface PlanItemRoleRepository extends JpaRepository<PlanItemRole, Long> {
     List<PlanItemRole> findAllByModifier(String modifier);
+    PlanItemRole findPlanItemRoleByName(String name);
 }

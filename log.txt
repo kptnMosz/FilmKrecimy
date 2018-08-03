@@ -1,8 +1,274 @@
------=======2018-08-02T17:54:24.620452======---------
-place: UserServiceImpl
-message: przypisuje role
-data: pl.wojtektrzos.filmkrecimy.entity.Authority@2d1fe8da
------=======2018-08-02T18:03:06.627654======---------
-place: UserServiceImpl
-message: przypisuje role
-data: pl.wojtektrzos.filmkrecimy.entity.Authority@68ee5f6e
+-----=======2018-08-03T11:25:03.624399======---------
+place: sceene Controler
+message: dane wejsciowe
+data: Movie(id=0, name=null, description=null, observers=null, owner=null, activities=null)
+-----=======2018-08-03T11:25:03.625494======---------
+place: sceene Controler
+message: dane wejsciowe
+data: pl.wojtektrzos.filmkrecimy.entity.User@418ab3bf
+-----=======2018-08-03T11:32:09.883819======---------
+place: addScene
+message: numer filmu
+data: 4
+-----=======2018-08-03T11:42:54.662615======---------
+place: addScene
+message: numer filmu
+data: 4
+-----=======2018-08-03T11:43:54.757896======---------
+place: addScene
+message: numer filmu
+data: 4
+-----=======2018-08-03T11:55:45.430397======---------
+place: addScene
+message: numer filmu
+data: 2
+-----=======2018-08-03T11:55:52.282801======---------
+place: addScene
+message: numer filmu
+data: 2
+-----=======2018-08-03T12:00:31.379135======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=null, planItemRole=null, numberOfDays=0, movie=null)
+-----=======2018-08-03T12:00:31.379965======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:01:51.424641======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:01:59.801213======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@11741c14, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@6cb5712f, numberOfDays=1, movie=null)
+-----=======2018-08-03T12:01:59.801369======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:20:16.943049======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:20:21.904705======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@38553bf3, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@745661f7, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@65131574, activities=[]))
+-----=======2018-08-03T12:20:21.904859======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:23:01.395422======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:23:04.418501======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@611ea120, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@15f3cb09, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@6625f5ea, activities=[]))
+-----=======2018-08-03T12:23:04.418606======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:23:04.436508======---------
+place: Service
+message: jaka rola
+data: pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@15f3cb09
+-----=======2018-08-03T12:26:54.354267======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:28:41.693563======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:28:56.944924======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:28:59.976012======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:30:26.034411======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:32:25.463613======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:32:29.127177======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@7c825877, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@ba47a97, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@2b4cf83a, activities=[]))
+-----=======2018-08-03T12:32:29.127282======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:32:29.140483======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T12:33:49.526054======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:33:52.062631======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@288d8b3a, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@46f5dcbe, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@7ec9e483, activities=[]))
+-----=======2018-08-03T12:33:52.062726======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:33:52.077536======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T12:35:18.740612======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:35:23.074247======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@1220dc68, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@42b8b5f4, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@4a6d6820, activities=[]))
+-----=======2018-08-03T12:35:23.074345======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:35:23.095851======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T12:48:12.653999======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:48:17.771236======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@62d11606, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@2f13a8b5, activities=[]))
+-----=======2018-08-03T12:48:17.771348======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:48:17.790976======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T12:48:17.791094======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T12:48:54.387955======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:49:01.177394======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@e5d9585, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@5cb1792d, activities=[]))
+-----=======2018-08-03T12:49:01.177497======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:49:01.198412======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T12:49:01.198655======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T12:55:20.160365======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:55:25.724001======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@28a55ba7, planItemRole=PlanItemRole(id=5, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@31b4f339, activities=[]))
+-----=======2018-08-03T12:55:25.724117======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:55:25.748998======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=5, name=null, modifier=null)
+-----=======2018-08-03T12:55:25.749237======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T12:55:25.759628======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=5, name=null, modifier=null)
+-----=======2018-08-03T12:58:42.309374======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T12:58:46.913995======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@5bef0cda, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=2, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@62ea3fe2, activities=[pl.wojtektrzos.filmkrecimy.entity.Activity@2ea247c1, pl.wojtektrzos.filmkrecimy.entity.Activity@7799d50a, pl.wojtektrzos.filmkrecimy.entity.Activity@3c6e6cb9]))
+-----=======2018-08-03T12:58:46.914187======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T12:58:46.931170======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T12:58:46.931349======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T12:58:46.941213======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T12:58:46.941307======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T12:58:46.943979======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T13:00:34.536106======---------
+place: addScene
+message: numer filmu
+data: 7
+-----=======2018-08-03T13:50:06.512472======---------
+place: addScene
+message: numer filmu
+data: 3
+-----=======2018-08-03T13:50:11.090346======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@775008cf, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@49450ba9, activities=[pl.wojtektrzos.filmkrecimy.entity.Activity@2214bd94, pl.wojtektrzos.filmkrecimy.entity.Activity@34e44ebc, pl.wojtektrzos.filmkrecimy.entity.Activity@3317b83e, pl.wojtektrzos.filmkrecimy.entity.Activity@5e442ad9]))
+-----=======2018-08-03T13:50:11.090473======---------
+place: registerScene
+message: otrzymany obiekt
+data: 3
+-----=======2018-08-03T13:50:11.105030======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T13:50:11.105135======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T13:50:11.112748======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T13:50:18.694941======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@24110500 
+PlanItem{id=18, name='test day-1'}
+<br />
