@@ -7,12 +7,17 @@
 </head>
 <body>
 <table>
+    <tr th:replace="views/fragments/layout :: top">
+    </tr>
     <tr>
         <td th:replace="views/fragments/layout :: left">
-            Zawartość widoku
         </td>
         <td>
-            zawartosc strony
+            <form method="post" action="/user/updateAvailibleDates">
+                <input th:each="date, stat:${calendar}" type="checkbox" th:value="${date}" name="eventDates" /><!--th:text="${#temporals.dayOfWeek(date)}"-->
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                <input type="submit" value="zaktualizuj"/>
+            </form>
         </td>
     </tr>
 </table>

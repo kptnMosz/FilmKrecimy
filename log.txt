@@ -1126,3 +1126,7 @@ data: null
 place: Service
 message: ActivityDto
 data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-16T15:22:21.576756======---------
+place: addScene
+message: numer filmu
+data: 6

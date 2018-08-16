@@ -8,21 +8,28 @@ import pl.wojtektrzos.filmkrecimy.entity.PlanItem;
 import pl.wojtektrzos.filmkrecimy.repository.EventDateRepository;
 
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
-@NoArgsConstructor
 public class UserCalendarService {
     @Autowired
     EventDateRepository eventDateRepository;
 
-    public Map<LocalDate, Long> getUserCalendar(PlanItem owner) {
-        Map<LocalDate, Long> outcome = new HashMap<>();
+    public Map<LocalDate, PlanItem> getUserCalendarWithOcupant(PlanItem owner) {
+        Map<LocalDate, PlanItem> outcome = new HashMap<>();
         for (EventDate eventDate : eventDateRepository.findAllByOwnerPlanItem(owner)){
-
+            outcome.put(eventDate.getDate(),eventDate.getOccupiedBy());
         }
-        return null;
+        return outcome;
+    }
+
+    public List<LocalDate> getYear(){
+        List<LocalDate> outcome = new ArrayList<>();
+        for(int i = 0; i<365;i++)
+        {
+            outcome.add(LocalDate.now().plusDays(i));
+        }
+        return outcome;
     }
 
 }

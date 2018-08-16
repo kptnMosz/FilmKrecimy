@@ -3,7 +3,7 @@
 <head>
     <title>layout</title>
     <span th:fragment="headData">
-    <link rel="stylesheet" type="text/css" th:href="@{../views/css/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{~/views/css/style.css}">
     </span>
 
 </head>
@@ -11,12 +11,12 @@
 <h1>
     <table>
         <tr th:fragment="top">
-            <td>logo</td>
-            <td></td>
+            <td class="sidemenu">logo</td>
+            <td class = "sidemenu" width="80%"></td>
         </tr>
         <tr>
             <td th:fragment="left" class="sidemenu">
-                <img th:src="@{../views/avatars/teddy.png}" id="avatar" />
+                <img th:src="@{~/views/avatars/teddy.png}" id="avatar" />
                 <ul>
 
                     <li>

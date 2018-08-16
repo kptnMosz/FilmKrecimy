@@ -8,17 +8,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.wojtektrzos.filmkrecimy.entity.User;
 import pl.wojtektrzos.filmkrecimy.entity.UserDetails;
+import pl.wojtektrzos.filmkrecimy.repository.EventDateRepository;
 import pl.wojtektrzos.filmkrecimy.repository.PlanItemRoleRepository;
 import pl.wojtektrzos.filmkrecimy.repository.UserDetailsRepository;
 import pl.wojtektrzos.filmkrecimy.repository.UserRepository;
 import pl.wojtektrzos.filmkrecimy.service.CurrentUser;
+import pl.wojtektrzos.filmkrecimy.service.UserCalendarService;
 import pl.wojtektrzos.filmkrecimy.service.UserServiceImpl;
+
+import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -29,6 +32,11 @@ public class UserController {
     UserDetailsRepository userDetailsRepository;
     @Autowired
     PlanItemRoleRepository planItemRoleRepository;
+    @Autowired
+    UserCalendarService userCalendarService;
+    @Autowired
+    EventDateRepository eventDateRepository;
+
 
     @GetMapping("/register")
 
@@ -69,10 +77,19 @@ public class UserController {
 
     @GetMapping("/projects")
     @Secured("ROLE_USER")
-    public String userProjects(@AuthenticationPrincipal CurrentUser currentUser, Model model)
-    {
-        model.addAttribute("userDates", currentUser.getUser().getDetails().getPlanMyself().getEventDates());
+    public String userProjects(@AuthenticationPrincipal CurrentUser currentUser, Model model) {
+        model.addAttribute("userDates", eventDateRepository.findAllByOwnerPlanItem(currentUser.getUser().getDetails().getPlanMyself()));
+        model.addAttribute("user", currentUser.getUser().getDetails());
+        model.addAttribute("calendar", userCalendarService.getYear());
         return "views/user/projects";
+    }
+
+    @PostMapping("/updateAvailibleDates")
+    @Secured("ROLE_USER")
+    @ResponseBody
+    public String updateAvailibleDates(@RequestParam String[] eventDates){
+        LocalDate date = LocalDate.parse(eventDates[0]);
+        return date.toString();
     }
 
 
