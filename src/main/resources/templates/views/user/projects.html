@@ -3,7 +3,7 @@
 <head>
     <span th:replace="views/fragments/layout :: headData"> </span>
     <meta charset="UTF-8">
-    <title>myMovies</title>
+    <title>Title</title>
 </head>
 <body>
 <table>
@@ -12,18 +12,11 @@
             Zawartość widoku
         </td>
         <td>
-
-            <table border="1">
-                <th>tytuł</th>
-                <th>opis</th>
-                <tr th:each="movie :${movies}">
-                    <td><a th:href="@{/movie/moviedetails/{id}/(id=${movie.id})}" th:text="${movie.name}">link</a></td>
-                    <td th:text="${movie.description}"></td>
-                </tr>
-            </table>
             zawartosc strony
         </td>
     </tr>
 </table>
+
+
 </body>
 </html>

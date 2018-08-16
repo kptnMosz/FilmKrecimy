@@ -14,4 +14,5 @@ import java.util.List;
 public interface EventDateRepository extends JpaRepository<EventDate, Long> {
     List<EventDate> findAllByOccupiedBy(PlanItem ocupied);
     EventDate findEventDateByOwnerPlanItemAndDate(PlanItem owner, LocalDate date);
+    List<EventDate> findAllByOwnerPlanItem(PlanItem owner);
 }

@@ -67,5 +67,13 @@ public class UserController {
         return "redirect:/user/edit";
     }
 
+    @GetMapping("/projects")
+    @Secured("ROLE_USER")
+    public String userProjects(@AuthenticationPrincipal CurrentUser currentUser, Model model)
+    {
+        model.addAttribute("userDates", currentUser.getUser().getDetails().getPlanMyself().getEventDates());
+        return "views/user/projects";
+    }
+
 
 }

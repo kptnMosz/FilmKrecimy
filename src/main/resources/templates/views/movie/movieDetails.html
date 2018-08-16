@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <span th:replace="views/fragments/layout :: headData"> </span>
     <meta charset="UTF-8">
     <title>Movie Details</title>
 </head>
 <body>
-<form method="post" th:object="${movie}">
-    <input type="text" >
-    <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
-    <input th:if="${editable}" type="submit"/>
-</form>
+<table>
+    <tr>
+        <td th:replace="views/fragments/layout :: left">
+            Zawartość widoku
+        </td>
+        <td>
+            <form method="post" th:object="${movie}">
+                <input type="text">
+                <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                <input th:if="${editable}" type="submit"/>
+            </form>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

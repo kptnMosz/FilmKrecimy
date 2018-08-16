@@ -2,6 +2,7 @@ package pl.wojtektrzos.filmkrecimy.entity;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -42,6 +43,19 @@ public class PlanItem {
     private LocalDate availibleBefore;
 
 
+    public PlanItem(String name, List<PlanItemRole> planItemRoles, List<EventDate> eventDates, UserDetails owner, Activity activity, LocalDate availibleAfter, LocalDate availibleBefore) {
+        this.name = name;
+        this.planItemRoles = planItemRoles;
+        this.eventDates = eventDates;
+        this.owner = owner;
+        this.activity = activity;
+        this.availibleAfter = availibleAfter;
+        this.availibleBefore = availibleBefore;
+    }
+
+    public PlanItem() {
+    }
+
     public void notifyMe(PlanItem who, String message) {
         //todo ewentualne powiadomienia
     }
@@ -52,6 +66,12 @@ public class PlanItem {
 
     public void setPrerequisites(List<Prerequisite> prerequisites) {
         this.prerequisites = prerequisites;
+    }
+    public void addPrerequisites(Prerequisite prerequisite){
+        if(this.prerequisites==null){
+            this.prerequisites = new ArrayList<>();
+        }
+        prerequisites.add(prerequisite);
     }
 
     public List<PlanItemRole> getPlanItemRoles() {
@@ -85,9 +105,6 @@ public class PlanItem {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public PlanItem() {
     }
 
     public void addPlanItemRole(PlanItemRole role) {

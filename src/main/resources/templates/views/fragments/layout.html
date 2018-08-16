@@ -1,14 +1,59 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
-<head layout:fragment="head">
-<title>layout</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>layout</title>
+    <span th:fragment="headData">
+    <link rel="stylesheet" type="text/css" th:href="@{../views/css/style.css}">
+    </span>
+
 </head>
 <body>
 <h1>
-<div layout:fragment="content">
-    Tutaj pojawi się zawartość widoku korzystającego z tego layoutu.
-</div>
+    <table>
+        <tr th:fragment="top">
+            <td>logo</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td th:fragment="left" class="sidemenu">
+                <img th:src="@{../views/avatars/teddy.png}" id="avatar" />
+                <ul>
+
+                    <li>
+                        <a th:href="@{/user/edit}" th:text="#{sidemenu.edit.link}">your details</a>
+                    </li>
+                    <li>
+                        <a th:href="@{/user/projects}" th:text="#{sidemenu.projects.link}">your projects</a>
+                    </li>
+                    <li>
+                        <a th:href="@{/movie/addmovie}" th:text="#{sidemenu.addmovie.link}">dodaj film</a>
+                    </li>
+                    <li>
+                        <a th:href="@{/movie/myMovies}" th:text="#{sidemenu.myMovies.link}">Twoje projekty</a>
+                    </li>
+
+                </ul>
+            </td>
+            <td> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius risus auctor lacinia fermentum.
+                Proin mauris ipsum, commodo vel fermentum consequat, condimentum eu odio. Donec aliquet mi libero, quis
+                Etiam facilisis odio sit amet enim posuere dignissim. Donec sed feugiat nunc, sed rhoncus purus.
+
+                Nam volutpat iaculis vehicula. Nunc quis libero erat. In ultricies, ante sed placerat laoreet, libero
+                odio porta urna, sed tempus justo dui ac justo. Nunc metus ante, pellentesque a tempus sit amet,
+                hendrerit in tortor. Fusce eget posuere tellus. Pellentesque bibendum, felis ac efficitur pharetra,
+                bibendum consectetur. Donec sodales sapien elit, quis interdum augue lacinia vel.
+
+                In laoreet mattis turpis, sit amet commodo risus venenatis sit amet. Donec blandit elit ultrices nulla
+                scelerisque lacus. Morbi tincidunt interdum felis, at vestibulum felis fermentum at. Etiam scelerisque
+                arcu vel tortor mollis, eu iaculis nunc dignissim. Nunc auctor mauris tellus, non mattis turpis egestas
+                sed.
+
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec
+                dictum sodales nibh, in vulputate purus interdum eget. Etiam hendrerit arcu vel sem ultrices hendrerit.
+
+            </td>
+        </tr>
+    </table>
     dupa
 </h1>
 </body>

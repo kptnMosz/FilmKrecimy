@@ -12,12 +12,11 @@ import pl.wojtektrzos.filmkrecimy.dto.ActivityDto;
 import pl.wojtektrzos.filmkrecimy.entity.Activity;
 import pl.wojtektrzos.filmkrecimy.entity.Movie;
 import pl.wojtektrzos.filmkrecimy.entity.PlanItem;
-import pl.wojtektrzos.filmkrecimy.repository.ActivityRepository;
-import pl.wojtektrzos.filmkrecimy.repository.MovieRepository;
-import pl.wojtektrzos.filmkrecimy.repository.PlanItemRepository;
-import pl.wojtektrzos.filmkrecimy.repository.PlanItemRoleRepository;
+import pl.wojtektrzos.filmkrecimy.entity.Prerequisite;
+import pl.wojtektrzos.filmkrecimy.repository.*;
 import pl.wojtektrzos.filmkrecimy.service.ActivityService;
 import pl.wojtektrzos.filmkrecimy.service.CurrentUser;
+import pl.wojtektrzos.filmkrecimy.service.EventPlanner;
 import pl.wojtektrzos.filmkrecimy.util.EnterLog;
 
 
@@ -34,6 +33,10 @@ public class MovieController {
     ActivityService activityService;
     @Autowired
     PlanItemRepository planItemRepository;
+    @Autowired
+    EventPlanner eventPlanner;
+    @Autowired
+    PrerequisiteRepository prerequisiteRepository;
 
     @Secured("ROLE_USER")
     @GetMapping("/addmovie")
@@ -122,18 +125,52 @@ public class MovieController {
 
     @Secured("ROLE_USER")
     @GetMapping("/observe/{sceeneId}")
-    public String observe(@PathVariable long sceeneId, @AuthenticationPrincipal CurrentUser currentUser)
-    {
-       Activity activity = activityRepository.getOne(sceeneId);
+    public String observe(@PathVariable long sceeneId, @AuthenticationPrincipal CurrentUser currentUser) {
+        Activity activity = activityRepository.getOne(sceeneId);
 
-       for(PlanItem event : activity.getEvents()){
-           event.addObserver(currentUser.getUser().getDetails().getPlanMyself());
-           EnterLog.log("observe", "dane", activity.toString() + " \n"+event.toString());
+        for (PlanItem event : activity.getEvents()) {
+            event.addObserver(currentUser.getUser().getDetails().getPlanMyself());
+            EnterLog.log("observe", "dane", activity.toString() + " \n" + event.toString());
 
-           planItemRepository.save(event);
-       }
-       return "redirect:/movie/moviedetails/"+activity.getMovie().getId()+"/";
+            planItemRepository.save(event);
+        }
+        return "redirect:/movie/moviedetails/" + activity.getMovie().getId() + "/";
     }
 
+    @Secured("ROLE_USER")
+    @GetMapping("/plan/{sceeneId}")
+    public String planEvent(@AuthenticationPrincipal CurrentUser currentUser, @PathVariable long sceeneId) {
+        Activity activity = activityRepository.getOne(sceeneId);
 
+        for (PlanItem event : activity.getEvents()) {
+
+            eventPlanner.updatePlan(event.getId());
+        }
+        return "redirect:/movie/moviedetails/" + activity.getMovie().getId() + "/";
+    }
+
+    @Secured("ROLE_USER")
+    @GetMapping("/editSceene/{sceeneId}")
+    public String editScene(@AuthenticationPrincipal CurrentUser currentUser, @PathVariable long sceeneId, Model model) {
+        Activity activity = activityRepository.getOne(sceeneId);
+
+        model.addAttribute("activity", activity.getEvents());
+        model.addAttribute("preq", new Prerequisite());
+
+
+        return "views/movie/activityAddPrerequisites";
+    }
+
+    @Secured("ROLE_USER")
+    @PostMapping("/addPrerequisite/{sceeneId}")
+    public String addPreq(@AuthenticationPrincipal CurrentUser currentUser, Prerequisite prerequisite, @PathVariable long sceeneId)
+    {
+        PlanItem event = planItemRepository.getOne(sceeneId);
+        event.addPrerequisites(prerequisite);
+
+        prerequisiteRepository.save(prerequisite);
+        planItemRepository.save(event);
+
+        return "redirect:/movie/moviedetails/" + event.getActivity().getMovie().getId() + "/";
+    }
 }

@@ -1,274 +1,1128 @@
------=======2018-08-03T11:25:03.624399======---------
-place: sceene Controler
-message: dane wejsciowe
-data: Movie(id=0, name=null, description=null, observers=null, owner=null, activities=null)
------=======2018-08-03T11:25:03.625494======---------
-place: sceene Controler
-message: dane wejsciowe
-data: pl.wojtektrzos.filmkrecimy.entity.User@418ab3bf
------=======2018-08-03T11:32:09.883819======---------
+-----=======2018-08-03T14:19:35.214723======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T14:19:38.610002======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T14:19:38.625119======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T14:23:17.965514======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T14:23:17.969865======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T14:23:17.977004======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: []
+-----=======2018-08-03T14:34:56.525087======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@74b7b3f7 
+PlanItem{id=22, name='montaz day-2'}
+<br />
+-----=======2018-08-03T14:34:56.534534======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@74b7b3f7 
+PlanItem{id=21, name='montaz day-1'}
+<br />
+-----=======2018-08-03T14:34:56.536012======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@74b7b3f7 
+PlanItem{id=23, name='montaz day-3'}
+<br />
+-----=======2018-08-03T14:35:01.852989======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T14:35:01.855591======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=5, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T14:35:03.398050======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=5, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T14:35:03.400310======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-08ocupied by=21}]
+-----=======2018-08-03T14:35:04.381461======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=5, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T14:35:04.383063======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-08ocupied by=21}]
+-----=======2018-08-03T14:35:05.305478======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=5, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T14:35:05.307526======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-08ocupied by=21}]
+-----=======2018-08-03T14:35:06.152898======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=5, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T14:35:06.156757======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-08ocupied by=21}]
+-----=======2018-08-03T14:35:07.130979======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=5, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T14:35:07.133996======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-08ocupied by=21}]
+-----=======2018-08-03T14:35:49.718444======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T14:35:49.720353======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: []
+-----=======2018-08-03T14:35:49.721866======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T14:35:49.723870======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=5, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T14:35:49.726110======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-08ocupied by=21}]
+-----=======2018-08-03T14:36:12.149134======---------
 place: addScene
 message: numer filmu
-data: 4
------=======2018-08-03T11:42:54.662615======---------
-place: addScene
-message: numer filmu
-data: 4
------=======2018-08-03T11:43:54.757896======---------
-place: addScene
-message: numer filmu
-data: 4
------=======2018-08-03T11:55:45.430397======---------
-place: addScene
-message: numer filmu
-data: 2
------=======2018-08-03T11:55:52.282801======---------
-place: addScene
-message: numer filmu
-data: 2
------=======2018-08-03T12:00:31.379135======---------
+data: 3
+-----=======2018-08-03T14:36:29.564650======---------
 place: registerScene
 message: numer filmu
-data: ActivityDto(activity=null, planItemRole=null, numberOfDays=0, movie=null)
------=======2018-08-03T12:00:31.379965======---------
-place: registerScene
-message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:01:51.424641======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:01:59.801213======---------
-place: registerScene
-message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@11741c14, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@6cb5712f, numberOfDays=1, movie=null)
------=======2018-08-03T12:01:59.801369======---------
-place: registerScene
-message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:20:16.943049======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:20:21.904705======---------
-place: registerScene
-message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@38553bf3, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@745661f7, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@65131574, activities=[]))
------=======2018-08-03T12:20:21.904859======---------
-place: registerScene
-message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:23:01.395422======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:23:04.418501======---------
-place: registerScene
-message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@611ea120, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@15f3cb09, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@6625f5ea, activities=[]))
------=======2018-08-03T12:23:04.418606======---------
-place: registerScene
-message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:23:04.436508======---------
-place: Service
-message: jaka rola
-data: pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@15f3cb09
------=======2018-08-03T12:26:54.354267======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:28:41.693563======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:28:56.944924======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:28:59.976012======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:30:26.034411======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:32:25.463613======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:32:29.127177======---------
-place: registerScene
-message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@7c825877, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@ba47a97, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@2b4cf83a, activities=[]))
------=======2018-08-03T12:32:29.127282======---------
-place: registerScene
-message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:32:29.140483======---------
-place: Service
-message: jaka rola
-data: null
------=======2018-08-03T12:33:49.526054======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:33:52.062631======---------
-place: registerScene
-message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@288d8b3a, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@46f5dcbe, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@7ec9e483, activities=[]))
------=======2018-08-03T12:33:52.062726======---------
-place: registerScene
-message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:33:52.077536======---------
-place: Service
-message: jaka rola
-data: null
------=======2018-08-03T12:35:18.740612======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:35:23.074247======---------
-place: registerScene
-message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@1220dc68, planItemRole=pl.wojtektrzos.filmkrecimy.entity.PlanItemRole@42b8b5f4, numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@4a6d6820, activities=[]))
------=======2018-08-03T12:35:23.074345======---------
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@51945113, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=2, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@77131d28, activities=[pl.wojtektrzos.filmkrecimy.entity.Activity@35fa00bb, pl.wojtektrzos.filmkrecimy.entity.Activity@23c22c30, pl.wojtektrzos.filmkrecimy.entity.Activity@1ef12469, pl.wojtektrzos.filmkrecimy.entity.Activity@2c603e79, pl.wojtektrzos.filmkrecimy.entity.Activity@2e1791dd, pl.wojtektrzos.filmkrecimy.entity.Activity@5b71ebff, pl.wojtektrzos.filmkrecimy.entity.Activity@497a1035]))
+-----=======2018-08-03T14:36:29.564783======---------
 place: registerScene
 message: otrzymany obiekt
 data: 3
------=======2018-08-03T12:35:23.095851======---------
-place: Service
-message: jaka rola
-data: null
------=======2018-08-03T12:48:12.653999======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:48:17.771236======---------
-place: registerScene
-message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@62d11606, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@2f13a8b5, activities=[]))
------=======2018-08-03T12:48:17.771348======---------
-place: registerScene
-message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:48:17.790976======---------
+-----=======2018-08-03T14:36:29.575066======---------
 place: Service
 message: ActivityDto
 data: PlanItemRole(id=1, name=null, modifier=null)
------=======2018-08-03T12:48:17.791094======---------
+-----=======2018-08-03T14:36:29.575252======---------
 place: Service
 message: jaka rola
 data: null
------=======2018-08-03T12:48:54.387955======---------
+-----=======2018-08-03T14:36:29.577605======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T14:36:29.577683======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T14:36:29.578930======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T15:22:09.108653======---------
+place: addScene
+message: numer filmu
+data: 5
+-----=======2018-08-03T15:22:30.400924======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@5a2cd140, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=3, movie=Movie(id=5, name=horror, description=zycie, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@62a974fe, activities=[]))
+-----=======2018-08-03T15:22:30.401089======---------
+place: registerScene
+message: otrzymany obiekt
+data: 5
+-----=======2018-08-03T15:22:30.406862======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T15:22:30.407005======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T15:22:30.410222======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T15:22:30.410322======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T15:22:30.413184======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T15:22:30.413286======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-03T15:22:30.416011======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T15:25:40.057698======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@3dfd9e39 
+PlanItem{id=25, name='pokaz day-2'}
+<br />
+-----=======2018-08-03T15:25:40.072597======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@3dfd9e39 
+PlanItem{id=24, name='pokaz day-1'}
+<br />
+-----=======2018-08-03T15:25:47.849909======---------
+place: UpdaterService
+message: wchodze
+data: {}
+-----=======2018-08-03T15:25:47.854310======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=6, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T15:26:33.467619======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=6, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T15:26:33.480287======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-06ocupied by=24}]
+-----=======2018-08-03T15:26:37.931655======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=6, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T15:26:37.936899======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-06ocupied by=24}]
+-----=======2018-08-03T15:26:40.086943======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=6, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T15:26:40.093017======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-06ocupied by=24}]
+-----=======2018-08-03T15:29:17.224875======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=6, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T15:29:17.227001======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-06ocupied by=24}]
+-----=======2018-08-03T23:11:49.968965======---------
 place: addScene
 message: numer filmu
 data: 3
------=======2018-08-03T12:49:01.177394======---------
+-----=======2018-08-03T23:11:58.083855======---------
 place: registerScene
 message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@e5d9585, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@5cb1792d, activities=[]))
------=======2018-08-03T12:49:01.177497======---------
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@35e5b3f8, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@7b8c555f, activities=[pl.wojtektrzos.filmkrecimy.entity.Activity@8a2f1b3, pl.wojtektrzos.filmkrecimy.entity.Activity@3613d850, pl.wojtektrzos.filmkrecimy.entity.Activity@3418c64, pl.wojtektrzos.filmkrecimy.entity.Activity@5bef0a59, pl.wojtektrzos.filmkrecimy.entity.Activity@2cb15, pl.wojtektrzos.filmkrecimy.entity.Activity@1cf1cad6, pl.wojtektrzos.filmkrecimy.entity.Activity@34085040, pl.wojtektrzos.filmkrecimy.entity.Activity@20dff7e4]))
+-----=======2018-08-03T23:11:58.084140======---------
 place: registerScene
 message: otrzymany obiekt
 data: 3
------=======2018-08-03T12:49:01.198412======---------
+-----=======2018-08-03T23:11:58.353462======---------
 place: Service
 message: ActivityDto
 data: PlanItemRole(id=1, name=null, modifier=null)
------=======2018-08-03T12:49:01.198655======---------
+-----=======2018-08-03T23:11:58.353780======---------
 place: Service
 message: jaka rola
 data: null
------=======2018-08-03T12:55:20.160365======---------
+-----=======2018-08-03T23:11:58.376959======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-03T23:13:18.219349======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@26cd6081 
+PlanItem{id=30, name='karo day-1'}
+<br />
+-----=======2018-08-03T23:14:00.841809======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=6, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T23:14:00.853154======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-06ocupied by=24}]
+-----=======2018-08-03T23:14:09.427706======---------
+place: UpdaterService
+message: wchodze
+data: {Prerequisite{id=5, discriminator='TYPE', fieldValue='ACTOR'}<br />=PlanItem{id=17, name='Henio'}
+<br />}
+-----=======2018-08-03T23:14:09.433208======---------
+place: updateEvent---===26===---
+message: zrzucam liste juz nieaktualnych zasobow
+data: [EventDate{date=2018-08-05ocupied by=21}]
+-----=======2018-08-13T15:51:27.064757======---------
 place: addScene
 message: numer filmu
-data: 3
------=======2018-08-03T12:55:25.724001======---------
+data: 6
+-----=======2018-08-13T15:51:33.636828======---------
 place: registerScene
 message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@28a55ba7, planItemRole=PlanItemRole(id=5, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@31b4f339, activities=[]))
------=======2018-08-03T12:55:25.724117======---------
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@14f55112, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=6, name=kufel, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@214067c3, activities=[]))
+-----=======2018-08-13T15:51:33.637056======---------
 place: registerScene
 message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:55:25.748998======---------
-place: Service
-message: ActivityDto
-data: PlanItemRole(id=5, name=null, modifier=null)
------=======2018-08-03T12:55:25.749237======---------
-place: Service
-message: jaka rola
-data: null
------=======2018-08-03T12:55:25.759628======---------
-place: Service
-message: ActivityDto
-data: PlanItemRole(id=5, name=null, modifier=null)
------=======2018-08-03T12:58:42.309374======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T12:58:46.913995======---------
-place: registerScene
-message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@5bef0cda, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=2, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@62ea3fe2, activities=[pl.wojtektrzos.filmkrecimy.entity.Activity@2ea247c1, pl.wojtektrzos.filmkrecimy.entity.Activity@7799d50a, pl.wojtektrzos.filmkrecimy.entity.Activity@3c6e6cb9]))
------=======2018-08-03T12:58:46.914187======---------
-place: registerScene
-message: otrzymany obiekt
-data: 3
------=======2018-08-03T12:58:46.931170======---------
+data: 6
+-----=======2018-08-13T15:51:33.644030======---------
 place: Service
 message: ActivityDto
 data: PlanItemRole(id=1, name=null, modifier=null)
------=======2018-08-03T12:58:46.931349======---------
+-----=======2018-08-13T15:51:33.644170======---------
 place: Service
 message: jaka rola
 data: null
------=======2018-08-03T12:58:46.941213======---------
+-----=======2018-08-13T15:51:33.657104======---------
 place: Service
 message: ActivityDto
 data: PlanItemRole(id=1, name=null, modifier=null)
------=======2018-08-03T12:58:46.941307======---------
-place: Service
-message: jaka rola
-data: null
------=======2018-08-03T12:58:46.943979======---------
-place: Service
-message: ActivityDto
-data: PlanItemRole(id=1, name=null, modifier=null)
------=======2018-08-03T13:00:34.536106======---------
+-----=======2018-08-13T15:53:53.344978======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@1852e8ac 
+PlanItem{id=31, name='montaz day-1'}
+<br />
+-----=======2018-08-15T16:02:20.780711======---------
 place: addScene
 message: numer filmu
 data: 7
------=======2018-08-03T13:50:06.512472======---------
-place: addScene
-message: numer filmu
-data: 3
------=======2018-08-03T13:50:11.090346======---------
+-----=======2018-08-15T16:02:46.642389======---------
 place: registerScene
 message: numer filmu
-data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@775008cf, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=3, name=szklanka, description=, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@49450ba9, activities=[pl.wojtektrzos.filmkrecimy.entity.Activity@2214bd94, pl.wojtektrzos.filmkrecimy.entity.Activity@34e44ebc, pl.wojtektrzos.filmkrecimy.entity.Activity@3317b83e, pl.wojtektrzos.filmkrecimy.entity.Activity@5e442ad9]))
------=======2018-08-03T13:50:11.090473======---------
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@a1d2a43, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=2, movie=Movie(id=7, name=Zemsta kiszonek II, description=Kiszonki sie mszcz?, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@34028ee7, activities=[]))
+-----=======2018-08-15T16:02:46.642601======---------
 place: registerScene
 message: otrzymany obiekt
-data: 3
------=======2018-08-03T13:50:11.105030======---------
+data: 7
+-----=======2018-08-15T16:02:46.651427======---------
 place: Service
 message: ActivityDto
 data: PlanItemRole(id=1, name=null, modifier=null)
------=======2018-08-03T13:50:11.105135======---------
+-----=======2018-08-15T16:02:46.651590======---------
 place: Service
 message: jaka rola
 data: null
------=======2018-08-03T13:50:11.112748======---------
+-----=======2018-08-15T16:02:46.656347======---------
 place: Service
 message: ActivityDto
 data: PlanItemRole(id=1, name=null, modifier=null)
------=======2018-08-03T13:50:18.694941======---------
+-----=======2018-08-15T16:02:46.656574======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:02:46.661206======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:03:00.554393======---------
 place: observe
 message: dane
-data: pl.wojtektrzos.filmkrecimy.entity.Activity@24110500 
-PlanItem{id=18, name='test day-1'}
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@2fd74751 
+PlanItem{id=33, name='Scena 1 day-1'}
 <br />
+-----=======2018-08-15T16:03:00.559182======---------
+place: observe
+message: dane
+data: pl.wojtektrzos.filmkrecimy.entity.Activity@2fd74751 
+PlanItem{id=34, name='Scena 1 day-2'}
+<br />
+-----=======2018-08-15T16:03:02.595932======---------
+place: addScene
+message: numer filmu
+data: 7
+-----=======2018-08-15T16:03:26.162917======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@39c95a3a, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=1, movie=Movie(id=7, name=Zemsta kiszonek II, description=Kiszonki sie mszcz?, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@aaddf56, activities=[pl.wojtektrzos.filmkrecimy.entity.Activity@79c90c67]))
+-----=======2018-08-15T16:03:26.163193======---------
+place: registerScene
+message: otrzymany obiekt
+data: 7
+-----=======2018-08-15T16:03:26.173772======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:03:26.174006======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:03:26.180480======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:23.958059======---------
+place: addScene
+message: numer filmu
+data: 7
+-----=======2018-08-15T16:05:40.364084======---------
+place: registerScene
+message: numer filmu
+data: ActivityDto(activity=pl.wojtektrzos.filmkrecimy.entity.Activity@3c30497f, planItemRole=PlanItemRole(id=1, name=null, modifier=null), numberOfDays=90, movie=Movie(id=7, name=Zemsta kiszonek II, description=Kiszonki sie mszcz?, observers=[], owner=pl.wojtektrzos.filmkrecimy.entity.UserDetails@20ac4194, activities=[pl.wojtektrzos.filmkrecimy.entity.Activity@3953a3c8, pl.wojtektrzos.filmkrecimy.entity.Activity@7c5783ac]))
+-----=======2018-08-15T16:05:40.364249======---------
+place: registerScene
+message: otrzymany obiekt
+data: 7
+-----=======2018-08-15T16:05:40.368014======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.368126======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.370631======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.370730======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.373098======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.373235======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.375877======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.376001======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.378533======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.378635======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.380897======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.381007======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.384137======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.384263======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.387936======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.388037======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.390327======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.390421======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.392390======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.392468======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.394414======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.394501======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.396389======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.396464======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.398037======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.398099======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.399825======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.399903======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.401856======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.401937======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.404568======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.404668======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.410473======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.410591======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.413844======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.414052======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.417149======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.417331======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.420594======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.420662======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.422107======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.422218======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.423764======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.423833======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.425408======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.425507======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.427153======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.427226======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.428680======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.428735======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.430183======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.430242======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.431505======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.431559======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.433641======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.433709======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.435997======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.436091======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.438370======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.438437======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.439775======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.439823======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.441123======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.441175======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.442810======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.442895======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.444544======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.444659======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.446928======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.447004======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.448635======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.448702======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.450572======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.450641======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.452695======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.452838======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.455505======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.455563======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.456788======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.456830======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.458208======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.458260======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.459728======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.459789======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.461208======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.461256======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.462536======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.462582======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.464061======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.464112======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.465619======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.465665======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.467462======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.467514======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.468828======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.468879======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.470241======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.470281======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.471800======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.471843======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.473049======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.473130======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.474345======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.474396======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.475777======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.475852======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.478177======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.478305======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.480766======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.480854======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.482617======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.482686======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.484109======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.484154======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.485437======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.485478======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.486760======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.486801======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.488064======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.488108======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.489289======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.489328======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.490501======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.490538======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.492476======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.492561======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.494035======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.494083======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.495583======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.495626======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.496974======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.497019======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.498577======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.498619======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.499891======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.499931======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.501640======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.501752======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.503250======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.503331======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.504950======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.504997======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.507282======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.507419======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.510732======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.510853======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.512799======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.512881======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.514857======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.514915======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.516902======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.516957======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.519230======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.519291======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.521633======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.521711======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.523624======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.523679======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.525943======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.525990======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.527287======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.527325======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.528515======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.528552======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.529808======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.529852======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.531126======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.531164======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.532411======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.532449======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.533777======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.533827======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.535118======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.535158======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.537125======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.537256======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.541169======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.541237======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.543314======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)
+-----=======2018-08-15T16:05:40.543364======---------
+place: Service
+message: jaka rola
+data: null
+-----=======2018-08-15T16:05:40.545250======---------
+place: Service
+message: ActivityDto
+data: PlanItemRole(id=1, name=null, modifier=null)

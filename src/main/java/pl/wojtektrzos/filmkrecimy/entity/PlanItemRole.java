@@ -16,6 +16,11 @@ public class PlanItemRole {
     public PlanItemRole() {
     }
 
+    public PlanItemRole(String name, String modifier) {
+        this.name = name;
+        this.modifier = modifier;
+    }
+
     public long getId() {
         return id;
     }

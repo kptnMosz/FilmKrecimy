@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <span th:replace="views/fragments/layout :: headData"> </span>
     <meta charset="UTF-8">
     <title>Sceene Details</title>
 </head>
 <body>
-<h3 th:if="${notauthorised}" th:text="Nie masz uprawnień do dodawania scen do tego filmu"></h3>
-<div th:unless="${notauthorised}">
-    <form method="post" th:object="${activity}">
-      Nazwa: <input type="text" th:field="*{activity.name}">
-      Opis: <textarea th:field="*{activity.description}"  ></textarea>
-        <select th:field="*{planItemRole.id}">
-            <option th:each="event:${events}" th:value="${event.id}" th:utext="${event.name}" />
-        </select>
-        ilość dni:<input type="number" step="1" th:field="*{numberOfDays}">
-        <input th:field="*{movie}" type="hidden"/>
+<table>
+    <tr>
+        <td th:replace="views/fragments/layout :: left">
+            Zawartość widoku
+        </td>
+        <td>
 
-      <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
-     <input th:if="${editable}" type="submit"/>
-    </form>
-</div>
+            <h3 th:if="${notauthorised}" th:text="Nie masz uprawnień do dodawania scen do tego filmu"></h3>
+            <div th:unless="${notauthorised}">
+                <form method="post" th:object="${activity}">
+                    Nazwa: <input type="text" th:field="*{activity.name}">
+                    Opis: <textarea th:field="*{activity.description}"></textarea>
+                    <select th:field="*{planItemRole.id}">
+                        <option th:each="event:${events}" th:value="${event.id}" th:utext="${event.name}"/>
+                    </select>
+                    ilość dni:<input type="number" step="1" th:field="*{numberOfDays}">
+                    <input th:field="*{movie}" type="hidden"/>
+
+                    <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}"
+                           th:value="${_csrf.token}"/>
+                    <input th:if="${editable}" type="submit"/>
+                </form>
+            </div>
+
+        </td>
+    </tr>
+</table>
 </body>
 </html>

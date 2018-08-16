@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <span th:replace="views/fragments/layout :: headData"> </span>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td th:replace="views/fragments/layout :: left">
+            Zawartość widoku
+        </td>
+        <td>
+
+            <div th:each="event:${activity}">
+                <p th:text="${event.name}"/>
+
+
+                <br/>
+                <form th:object="${preq}" method="post"
+                      th:action="@{/movie/addPrerequisite/{sceeneId}/(sceeneId=${event.id})}">
+                    <input type="text" th:field="*{discriminator}"/>
+                    <input type="text" th:field="*{fieldValue}"/>
+                    <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}"
+                           th:value="${_csrf.token}"/>
+                    <input value="dodaj zaleznosc" type="submit"/>
+                </form>
+            </div>
+
+        </td>
+    </tr>
+</table>
+</body>
+</html>

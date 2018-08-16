@@ -34,6 +34,7 @@ public class ActivityService {
             EnterLog.log("Service", "jaka rola", activityDto.getPlanItemRole().getName() + "");
             event.setPlanItemRoles(activityDto.getPlanItemRole());
             event.setActivity(activityDto.getActivity());
+            event.setOwner(activityDto.getActivity().getMovie().getOwner());
             planItemRepository.save(event);
             EnterLog.log("Service", "ActivityDto", activityDto.getPlanItemRole().toString());
         }

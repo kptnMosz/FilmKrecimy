@@ -1,12 +1,21 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
-      layout:decorator=~{fragments/layout.html}>
+<html xmlns:th="http://www.thymeleaf.org">
 
-
+<head>
+    <span th:replace="views/fragments/layout :: headData"> </span>
+    <title>     dupa
+    </title>
+</head>
 <body>
-<section layout:fragment="content">
-    //Zawartość widoku
-</section>
+<table>
+    <tr>
+        <td th:replace="views/fragments/layout :: left">
+            Zawartość widoku
+        </td>
+        <td>
+            zawartosc strony
+        </td>
+    </tr>
+</table>
 </body>
 </html>
