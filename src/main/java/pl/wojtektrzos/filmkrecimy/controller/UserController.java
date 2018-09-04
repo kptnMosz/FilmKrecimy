@@ -21,7 +21,9 @@ import pl.wojtektrzos.filmkrecimy.service.UserCalendarService;
 import pl.wojtektrzos.filmkrecimy.service.UserServiceImpl;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/user")
@@ -78,9 +80,13 @@ public class UserController {
     @GetMapping("/projects")
     @Secured("ROLE_USER")
     public String userProjects(@AuthenticationPrincipal CurrentUser currentUser, Model model) {
-        model.addAttribute("userDates", eventDateRepository.findAllByOwnerPlanItem(currentUser.getUser().getDetails().getPlanMyself()));
+        model.addAttribute("userDates", userCalendarService.getEventDatesMapForPlaiItem(currentUser.getUser().getDetails().getPlanMyself()));
         model.addAttribute("user", currentUser.getUser().getDetails());
         model.addAttribute("calendar", userCalendarService.getYear());
+        Map<String, String> testMap = new HashMap<>();
+        testMap.put("dupa","cycki");
+        model.addAttribute("test", testMap);
+        model.addAttribute("weekDays", new int[] {1,2,3,4,5,6,7});
         return "views/user/projects";
     }
 

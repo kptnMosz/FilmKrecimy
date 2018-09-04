@@ -14,14 +14,35 @@
         </td>
         <td>
             <form method="post" action="/user/updateAvailibleDates">
-                <input th:each="date, stat:${calendar}" type="checkbox" th:value="${date}" name="eventDates" /><!--th:text="${#temporals.dayOfWeek(date)}"-->
+                <input th:each="date, stat:${calendar}" type="checkbox" th:value="${date}"
+                       th:text="${#temporals.dayOfWeekNameShort(date)}" name="eventDates"/>
+                <!--th:text="${#temporals.dayOfWeek(date)}"-->
                 <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
                 <input type="submit" value="zaktualizuj"/>
             </form>
         </td>
     </tr>
+    <tr>
+        <td th:each="userDate : ${userDates}" th:text="${userDate}">
+
+        </td>
+    </tr>
+    <tr>
+        <td th:text="${test.get('dupa')}">
+
+        </td>
+    </tr>
+
 </table>
 
+<hr/>
+<table border=1 th:with="today = ${#dates.createNow()}, firstDayOfMonth = ${#temporals.create(today.getYear()-100+2000, today.getMonth()+1, '1') }, monthStarted=0">
+    <tr th:each="dayOfWeek : ${weekDays}">
+        <th th:text="#{NameOfDayOfWeek+${dayOfWeek}}"></th>
+        <td><div th:if="${dayOfWeek}==${#temporals.dayOfWeek(firstDayOfMonth)}" th:text="${monthStarted}"></div></td>
+
+    </tr>
+</table>
 
 </body>
 </html>

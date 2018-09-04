@@ -15,18 +15,18 @@ public class UserCalendarService {
     @Autowired
     EventDateRepository eventDateRepository;
 
-    public Map<LocalDate, PlanItem> getUserCalendarWithOcupant(PlanItem owner) {
-        Map<LocalDate, PlanItem> outcome = new HashMap<>();
-        for (EventDate eventDate : eventDateRepository.findAllByOwnerPlanItem(owner)){
-            outcome.put(eventDate.getDate(),eventDate.getOccupiedBy());
+    public Map<LocalDate, EventDate> getEventDatesMapForPlaiItem(PlanItem owner) {
+        Map<LocalDate, EventDate> eventsWithDate = new HashMap<>();
+        List<EventDate> ownerEvents = eventDateRepository.findAllByOwnerPlanItem(owner);
+        for(EventDate eventDate:ownerEvents){
+            eventsWithDate.put(eventDate.getDate(), eventDate);
         }
-        return outcome;
+        return eventsWithDate;
     }
 
-    public List<LocalDate> getYear(){
+    public List<LocalDate> getYear() {
         List<LocalDate> outcome = new ArrayList<>();
-        for(int i = 0; i<365;i++)
-        {
+        for (int i = 0; i < 365; i++) {
             outcome.add(LocalDate.now().plusDays(i));
         }
         return outcome;
