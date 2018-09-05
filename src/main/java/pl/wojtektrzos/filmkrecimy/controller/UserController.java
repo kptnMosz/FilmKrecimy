@@ -20,10 +20,10 @@ import pl.wojtektrzos.filmkrecimy.service.CurrentUser;
 import pl.wojtektrzos.filmkrecimy.service.UserCalendarService;
 import pl.wojtektrzos.filmkrecimy.service.UserServiceImpl;
 
+import javax.servlet.annotation.MultipartConfig;
+import java.io.File;
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @RequestMapping("/user")
@@ -80,22 +80,32 @@ public class UserController {
     @GetMapping("/projects")
     @Secured("ROLE_USER")
     public String userProjects(@AuthenticationPrincipal CurrentUser currentUser, Model model) {
-        model.addAttribute("userDates", userCalendarService.getEventDatesMapForPlaiItem(currentUser.getUser().getDetails().getPlanMyself()));
         model.addAttribute("user", currentUser.getUser().getDetails());
         model.addAttribute("calendar", userCalendarService.getYear());
-        Map<String, String> testMap = new HashMap<>();
-        testMap.put("dupa","cycki");
-        model.addAttribute("test", testMap);
-        model.addAttribute("weekDays", new int[] {1,2,3,4,5,6,7});
+        model.addAttribute("daysInMonth", userCalendarService.getNumberOfDaysInMonth());
+        model.addAttribute("weekDays", new int[]{1, 2, 3, 4, 5, 6, 7});
+        model.addAttribute("maxNumberOfWeeksInMonth", new int[]{1, 2, 3, 4, 5, 6});
+        model.addAttribute("numberOfMonthsInScope", new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12});
         return "views/user/projects";
     }
 
     @PostMapping("/updateAvailibleDates")
     @Secured("ROLE_USER")
     @ResponseBody
-    public String updateAvailibleDates(@RequestParam String[] eventDates){
-        LocalDate date = LocalDate.parse(eventDates[0]);
-        return date.toString();
+    public String updateAvailibleDates(@RequestParam String[] eventDates,@AuthenticationPrincipal CurrentUser currentUser) {
+        Set<LocalDate> newAvailibleDates=new HashSet<>();
+        for(String unparsedDate:eventDates)
+        {
+            newAvailibleDates.add(LocalDate.parse(unparsedDate));
+        }
+        return userCalendarService.updateAvailibleDates(newAvailibleDates, currentUser.getUser().getDetails().getPlanMyself() );
+    }
+
+    @PostMapping("/updatePicture")
+    @Secured("ROLE_USER")
+    @ResponseBody
+    public String updateProfilePicture(@RequestParam File picture) {
+        return null;
     }
 
 

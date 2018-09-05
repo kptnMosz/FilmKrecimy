@@ -15,13 +15,24 @@ public class UserCalendarService {
     @Autowired
     EventDateRepository eventDateRepository;
 
-    public Map<LocalDate, EventDate> getEventDatesMapForPlaiItem(PlanItem owner) {
-        Map<LocalDate, EventDate> eventsWithDate = new HashMap<>();
-        List<EventDate> ownerEvents = eventDateRepository.findAllByOwnerPlanItem(owner);
-        for(EventDate eventDate:ownerEvents){
-            eventsWithDate.put(eventDate.getDate(), eventDate);
+    public Map<Integer, Integer> getNumberOfDaysInMonth() {
+        Map<Integer, Integer> numberOfDaysInMonth = new HashMap<>();
+        for (int i = 1; i <= 12; i++) {
+            LocalDate now = LocalDate.now();
+            int year = now.getYear();
+            if (i < now.getMonth().getValue()) {
+                year = year + 1;
+            }
+            LocalDate lastDayOfMonth;
+            if (i == 12) {
+                lastDayOfMonth = LocalDate.of(year, 1, 1).minusDays(1);
+            } else {
+                lastDayOfMonth = LocalDate.of(year, i + 1, 1).minusDays(1);
+            }
+            int daysInMonth = lastDayOfMonth.getDayOfMonth();
+            numberOfDaysInMonth.put(i, daysInMonth);
         }
-        return eventsWithDate;
+        return numberOfDaysInMonth;
     }
 
     public List<LocalDate> getYear() {
@@ -30,6 +41,33 @@ public class UserCalendarService {
             outcome.add(LocalDate.now().plusDays(i));
         }
         return outcome;
+    }
+
+    public String updateAvailibleDates(Set<LocalDate> availibleDates, PlanItem targetPlanItem){
+        String errorLog =null;
+
+        for(LocalDate date:availibleDates)
+        {
+            EventDate eventDate = eventDateRepository.findEventDateByOwnerPlanItemAndDate(targetPlanItem, date);
+            if(eventDate==null){
+                eventDate=new EventDate(date,targetPlanItem);
+                eventDateRepository.save(eventDate);
+            }
+        }
+
+        List<EventDate> targetsEventDates = eventDateRepository.findAllByOwnerPlanItem(targetPlanItem);
+        for (EventDate eventDate:targetsEventDates)
+        {
+            if(!availibleDates.contains(eventDate.getDate())){
+                if(eventDate.getOccupiedBy()==null){
+                    eventDateRepository.delete(eventDate);
+                }else {
+                    errorLog += eventDate.getDate().toString();
+                }
+            }
+        }
+
+        return errorLog;
     }
 
 }

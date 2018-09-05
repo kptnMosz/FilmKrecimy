@@ -25,6 +25,11 @@ public class EventDate {
     public EventDate() {
     }
 
+    public EventDate(LocalDate date, PlanItem ownerPlanItem) {
+        this.date = date;
+        this.ownerPlanItem = ownerPlanItem;
+    }
+
     public long getId() {
         return id;
     }
