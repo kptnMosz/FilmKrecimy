@@ -1,14 +1,37 @@
-.err{
+.err {
     color: red;
 }
 
 .sidemenu {
     background-color: darkgrey;
+    height: 100%;
 }
 
-#avatar{
+leftmenu{
+    background-color: midnightblue;
+}
+div.sidemenu {
+
+    align: top;
+}
+
+#avatar {
     margin-left: 20px;
     margin-top: 10px;
     width: 100px;
     height: 100px;
+}
+
+table.calendar{
+    margin: 2px;
+}
+div.calendar {
+    float: left;
+    border-radius: 25px;
+    background: #739D21;
+    margin: 2px;
+}
+
+table.calendar th {
+    align-content: left;
 }

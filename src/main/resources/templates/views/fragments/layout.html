@@ -9,30 +9,32 @@
 </head>
 <body>
 <h1>
-    <table>
+    <table border="1">
         <tr th:fragment="top">
             <td class="sidemenu">logo</td>
-            <td class = "sidemenu" width="80%"></td>
+            <td class="sidemenu" width="100%"></td>
         </tr>
         <tr>
-            <td th:fragment="left" class="sidemenu">
-                <img th:src="@{~/views/avatars/teddy.png}" id="avatar" />
-                <ul>
+            <td th:fragment="left" class="sidemenu leftmenu">
+                <div class="sidemenu">
+                    <img th:src="@{~/views/avatars/teddy.png}" id="avatar"/>
+                    <ul>
 
-                    <li>
-                        <a th:href="@{/user/edit}" th:text="#{sidemenu.edit.link}">your details</a>
-                    </li>
-                    <li>
-                        <a th:href="@{/user/projects}" th:text="#{sidemenu.projects.link}">your projects</a>
-                    </li>
-                    <li>
-                        <a th:href="@{/movie/addmovie}" th:text="#{sidemenu.addmovie.link}">dodaj film</a>
-                    </li>
-                    <li>
-                        <a th:href="@{/movie/myMovies}" th:text="#{sidemenu.myMovies.link}">Twoje projekty</a>
-                    </li>
+                        <li>
+                            <a th:href="@{/user/edit}" th:text="#{sidemenu.edit.link}">your details</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/user/projects}" th:text="#{sidemenu.projects.link}">your projects</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/movie/addmovie}" th:text="#{sidemenu.addmovie.link}">dodaj film</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/movie/myMovies}" th:text="#{sidemenu.myMovies.link}">Twoje projekty</a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
             </td>
             <td> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius risus auctor lacinia fermentum.
                 Proin mauris ipsum, commodo vel fermentum consequat, condimentum eu odio. Donec aliquet mi libero, quis
