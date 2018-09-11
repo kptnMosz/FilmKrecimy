@@ -131,6 +131,6 @@ public class PlanItem {
         return "PlanItem{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                "}\n<br />";
+                "}";
     }
 }

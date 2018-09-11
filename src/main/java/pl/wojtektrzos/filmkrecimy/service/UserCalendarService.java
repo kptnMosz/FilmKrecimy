@@ -70,4 +70,13 @@ public class UserCalendarService {
         return errorLog;
     }
 
+    public List<String> stringifyEventDates(List<EventDate> eventDates){
+        List<String> dates = new ArrayList<>();
+        for(EventDate eventDate:eventDates)
+        {
+            dates.add(eventDate.getDate().toString());
+        }
+        return dates;
+    }
+
 }

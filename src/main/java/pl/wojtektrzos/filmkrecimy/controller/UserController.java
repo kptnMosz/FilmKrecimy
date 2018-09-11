@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import pl.wojtektrzos.filmkrecimy.entity.EventDate;
 import pl.wojtektrzos.filmkrecimy.entity.User;
 import pl.wojtektrzos.filmkrecimy.entity.UserDetails;
 import pl.wojtektrzos.filmkrecimy.repository.EventDateRepository;
@@ -80,12 +81,17 @@ public class UserController {
     @GetMapping("/projects")
     @Secured("ROLE_USER")
     public String userProjects(@AuthenticationPrincipal CurrentUser currentUser, Model model) {
-        model.addAttribute("user", currentUser.getUser().getDetails());
+        List<EventDate> eventDates = eventDateRepository.findAllByOwnerPlanItem(currentUser.getUser().getDetails().getPlanMyself());
+        UserDetails user = currentUser.getUser().getDetails();
+        model.addAttribute("user", user);
         model.addAttribute("calendar", userCalendarService.getYear());
         model.addAttribute("daysInMonth", userCalendarService.getNumberOfDaysInMonth());
         model.addAttribute("weekDays", new int[]{1, 2, 3, 4, 5, 6, 7});
         model.addAttribute("maxNumberOfWeeksInMonth", new int[]{1, 2, 3, 4, 5, 6});
         model.addAttribute("numberOfMonthsInScope", new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12});
+        model.addAttribute("eventDates", eventDateRepository.findAllByOwnerPlanItemAndOccupiedByIsNotNull(user.getPlanMyself()));
+        model.addAttribute("occupiedDates", userCalendarService.stringifyEventDates(eventDates));
+
         return "views/user/projects";
     }
 
