@@ -41,6 +41,7 @@ public class PlanItem {
     private Activity activity;
     private LocalDate availibleAfter;
     private LocalDate availibleBefore;
+    private String foto;
 
 
     public PlanItem(String name, List<PlanItemRole> planItemRoles, List<EventDate> eventDates, UserDetails owner, Activity activity, LocalDate availibleAfter, LocalDate availibleBefore) {

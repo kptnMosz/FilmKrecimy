@@ -50,10 +50,6 @@ table.calendar th {
     align-content: left;
 }
 
-.occupiedDay {
-    background: midnightblue;
-}
-
 .event {
     display: block;
     padding: 1px;
@@ -63,7 +59,12 @@ table.calendar th {
 
 }
 
+.occupiedDay {
+    border-radius: 25px;
+    background-color: green;
+}
+
 .highlight{
-    background-color: maroon;
+    background-color: seagreen;
     border-radius: 25px;
 }

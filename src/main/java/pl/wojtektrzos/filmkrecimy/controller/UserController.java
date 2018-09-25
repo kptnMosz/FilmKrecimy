@@ -16,18 +16,26 @@ import pl.wojtektrzos.filmkrecimy.entity.UserDetails;
 import pl.wojtektrzos.filmkrecimy.repository.EventDateRepository;
 import pl.wojtektrzos.filmkrecimy.repository.PlanItemRoleRepository;
 import pl.wojtektrzos.filmkrecimy.repository.UserDetailsRepository;
-import pl.wojtektrzos.filmkrecimy.repository.UserRepository;
+import pl.wojtektrzos.filmkrecimy.service.AvatarService;
 import pl.wojtektrzos.filmkrecimy.service.CurrentUser;
 import pl.wojtektrzos.filmkrecimy.service.UserCalendarService;
 import pl.wojtektrzos.filmkrecimy.service.UserServiceImpl;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.time.LocalDate;
 import java.util.*;
 
 @Controller
 @RequestMapping("/user")
+@MultipartConfig(maxFileSize = 1024 * 1024 * 40, maxRequestSize = 1024 * 1024 * 50, fileSizeThreshold = 1024 * 1024 * 20)
 public class UserController {
     @Autowired
     UserServiceImpl userRepository;
@@ -39,6 +47,9 @@ public class UserController {
     UserCalendarService userCalendarService;
     @Autowired
     EventDateRepository eventDateRepository;
+    @Autowired
+    AvatarService avatarService;
+    private String SAVE_DIR = "avatars";
 
 
     @GetMapping("/register")
@@ -98,20 +109,62 @@ public class UserController {
     @PostMapping("/updateAvailibleDates")
     @Secured("ROLE_USER")
     @ResponseBody
-    public String updateAvailibleDates(@RequestParam String[] eventDates,@AuthenticationPrincipal CurrentUser currentUser) {
-        Set<LocalDate> newAvailibleDates=new HashSet<>();
-        for(String unparsedDate:eventDates)
-        {
+    public String updateAvailibleDates(@RequestParam String[] eventDates, @AuthenticationPrincipal CurrentUser currentUser) {
+        Set<LocalDate> newAvailibleDates = new HashSet<>();
+        for (String unparsedDate : eventDates) {
             newAvailibleDates.add(LocalDate.parse(unparsedDate));
         }
-        return userCalendarService.updateAvailibleDates(newAvailibleDates, currentUser.getUser().getDetails().getPlanMyself() );
+        return userCalendarService.updateAvailibleDates(newAvailibleDates, currentUser.getUser().getDetails().getPlanMyself());
     }
 
     @PostMapping("/updatePicture")
-    @Secured("ROLE_USER")
     @ResponseBody
-    public String updateProfilePicture(@RequestParam File picture) {
-        return null;
+    @Secured("ROLE_USER")
+    public String updateProfilePicture(HttpServletRequest request, HttpServletResponse response, @AuthenticationPrincipal CurrentUser currentUser) throws IOException, ServletException {
+
+        String saveDir = request.getServletContext().getRealPath("");
+        String targetFile = saveDir + SAVE_DIR;
+        File folder = new File(targetFile);
+        File tmpFile;
+
+        if (!folder.exists() || !folder.isDirectory()) {
+            folder.mkdir();
+        }
+        String test = "";
+        for (Part part : request.getParts()) {
+
+            try {
+                if (part.getContentType().contains("image")) {
+                    tmpFile = new File(targetFile + File.separator + part.getSubmittedFileName());
+                    part.write(tmpFile.getPath());
+                    test = avatarService.updateAvatarPicture(tmpFile, currentUser.getUser().getDetails().getPlanMyself());
+                }
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return test;
+    }
+
+    @GetMapping("/avatarfoto")
+    @Secured("ROLE_USER")
+    public void getAvatarFoto(HttpServletResponse resp, HttpServletRequest request, @AuthenticationPrincipal CurrentUser currentUser) throws IOException {
+        File avatarFoto = avatarService.getAvatar(currentUser.getUser().getDetails().getPlanMyself());
+        String mime = request.getServletContext().getMimeType(avatarFoto.getName());
+        resp.setContentType(mime);
+        resp.setContentLength((int)avatarFoto.length());
+        FileInputStream in = new FileInputStream(avatarFoto);
+        OutputStream out = resp.getOutputStream();
+
+        // Copy the contents of the file to the output stream
+        byte[] buf = new byte[1024];
+        int count = 0;
+        while ((count = in.read(buf)) >= 0) {
+            out.write(buf, 0, count);
+        }
+        out.close();
+        in.close();
     }
 
 

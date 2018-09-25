@@ -6,6 +6,7 @@ $(document).ready(function () {
 
         var checkboxDate = $('#cb' + evdate);
         checkboxDate.attr('disabled', 'true');
+        checkboxDate.parent().addClass('occupiedDay')
         checkboxDate.parent().on('mouseenter', function () {
             $(classdate).addClass('highlight');
         });

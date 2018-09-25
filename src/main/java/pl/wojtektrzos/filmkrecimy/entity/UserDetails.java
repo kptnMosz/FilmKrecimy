@@ -29,8 +29,5 @@ public class UserDetails {
     private List<PlanItem> myAssets;
     @Email
     private String email;
-    private String foto;
-
-
 
 }
