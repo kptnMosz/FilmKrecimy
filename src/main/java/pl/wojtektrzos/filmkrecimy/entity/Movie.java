@@ -7,6 +7,7 @@ import lombok.Setter;
 import lombok.ToString;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -27,4 +28,6 @@ public class Movie {
     private UserDetails owner;
     @OneToMany(mappedBy = "movie")
     private Set<Activity> activities;
+    @OneToMany(mappedBy = "movie")
+    private List<Post> posts;
 }

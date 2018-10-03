@@ -173,4 +173,6 @@ public class MovieController {
 
         return "redirect:/movie/moviedetails/" + event.getActivity().getMovie().getId() + "/";
     }
+
+
 }
