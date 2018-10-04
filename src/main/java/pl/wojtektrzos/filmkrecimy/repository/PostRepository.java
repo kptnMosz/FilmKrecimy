@@ -10,4 +10,6 @@ import java.util.List;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
     public List<Post> findAllByMovie(Movie movie);
+
+    List<Post> findAllByMovieIdOrderByCreatedDesc(long movieId);
 }

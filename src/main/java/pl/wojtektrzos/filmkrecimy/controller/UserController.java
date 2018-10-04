@@ -11,9 +11,11 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.wojtektrzos.filmkrecimy.entity.EventDate;
+import pl.wojtektrzos.filmkrecimy.entity.PlanItem;
 import pl.wojtektrzos.filmkrecimy.entity.User;
 import pl.wojtektrzos.filmkrecimy.entity.UserDetails;
 import pl.wojtektrzos.filmkrecimy.repository.EventDateRepository;
+import pl.wojtektrzos.filmkrecimy.repository.PlanItemRepository;
 import pl.wojtektrzos.filmkrecimy.repository.PlanItemRoleRepository;
 import pl.wojtektrzos.filmkrecimy.repository.UserDetailsRepository;
 import pl.wojtektrzos.filmkrecimy.service.AvatarService;
@@ -39,6 +41,8 @@ import java.util.*;
 public class UserController {
     @Autowired
     UserServiceImpl userRepository;
+    @Autowired
+    PlanItemRepository planItemRepository;
     @Autowired
     UserDetailsRepository userDetailsRepository;
     @Autowired
@@ -147,25 +151,20 @@ public class UserController {
         return test;
     }
 
-    @GetMapping("/avatarfoto")
+    @GetMapping("/avatarfoto/my")
     @Secured("ROLE_USER")
     public void getAvatarFoto(HttpServletResponse resp, HttpServletRequest request, @AuthenticationPrincipal CurrentUser currentUser) throws IOException {
-        File avatarFoto = avatarService.getAvatar(currentUser.getUser().getDetails().getPlanMyself());
-        String mime = request.getServletContext().getMimeType(avatarFoto.getName());
-        resp.setContentType(mime);
-        resp.setContentLength((int)avatarFoto.length());
-        FileInputStream in = new FileInputStream(avatarFoto);
-        OutputStream out = resp.getOutputStream();
-
-        // Copy the contents of the file to the output stream
-        byte[] buf = new byte[1024];
-        int count = 0;
-        while ((count = in.read(buf)) >= 0) {
-            out.write(buf, 0, count);
-        }
-        out.close();
-        in.close();
+        avatarService.placeAvatarFotoInOutput(resp,request,currentUser.getUser().getDetails().getPlanMyself());
     }
+
+    @GetMapping("/avatarfoto/{planItemId}")
+    @Secured("ROLE_USER")
+    public void getAvatarFoto(HttpServletResponse resp, HttpServletRequest request, @PathVariable long planItemId) throws IOException {
+
+        avatarService.placeAvatarFotoInOutput(resp,request,planItemRepository.findPlanItemById(planItemId));
+    }
+
+
 
 
 }

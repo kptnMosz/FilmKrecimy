@@ -8,8 +8,9 @@ import pl.wojtektrzos.filmkrecimy.entity.PlanItem;
 import pl.wojtektrzos.filmkrecimy.repository.PlanItemRepository;
 import pl.wojtektrzos.filmkrecimy.util.EnterLog;
 
-import java.io.File;
-import java.io.IOException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -54,4 +55,23 @@ public class AvatarService {
         return null;
     }
 
+    public void placeAvatarFotoInOutput(HttpServletResponse resp, HttpServletRequest request,PlanItem owner) throws IOException {
+
+
+        File avatarFoto = getAvatar(owner);
+        String mime = request.getServletContext().getMimeType(avatarFoto.getName());
+        resp.setContentType(mime);
+        resp.setContentLength((int) avatarFoto.length());
+        FileInputStream in = new FileInputStream(avatarFoto);
+        OutputStream out = resp.getOutputStream();
+
+        // Copy the contents of the file to the output stream
+        byte[] buf = new byte[1024];
+        int count = 0;
+        while ((count = in.read(buf)) >= 0) {
+            out.write(buf, 0, count);
+        }
+        out.close();
+        in.close();
+    }
 }
