@@ -24,6 +24,7 @@
                 <fieldset>
                     <legend th:text="#{movie.editmovie.desc}">opis</legend>
                     <textarea th:field="*{description}" th:readonly="${editable}!=true"></textarea></fieldset>
+                <input type="hidden" id="movieId" th:value="*{id}"/>
                 <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
                 <input th:if="${editable}" type="submit"/>
             </form>
@@ -56,10 +57,20 @@
                     </td>
                 </tr>
             </table>
-
+            <div id="postsContainer">
+                <input type="hidden" id="urlForPosts" th:value="${'/Post/getAllPostsForMovie/' + movie.id}"/>
+                <span class="addComment" th:text="#{addComment}"></span>
+                <form action="/Post/moviePost" method="post">
+                    <input type="text" name="postContent"/>
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                    <input type="hidden" name="movieId" th:value="${movie.id}"/>
+                    <input type="submit"/>
+                </form>
+            </div>
         </td>
     </tr>
 </table>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" th:src="@{/views/js/movieDetails.js}"></script>
 </body>
 </html>

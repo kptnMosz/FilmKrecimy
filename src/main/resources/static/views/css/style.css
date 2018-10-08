@@ -22,8 +22,7 @@ div.sidemenu {
     clear: both;
 }
 
-
-.projectDate{
+.projectDate {
     border: 1px solid black;
 
 }
@@ -64,7 +63,45 @@ table.calendar th {
     background-color: green;
 }
 
-.highlight{
+.highlight {
     background-color: seagreen;
     border-radius: 25px;
+}
+
+.postAvatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    float: left;
+}
+
+.postHeader {
+    font-size: smaller;
+    font-style: oblique;
+}
+.postText{
+    background-color: green;
+    display: inline-block;
+}
+.postText::before{
+    content: '\00000A';
+}
+
+.post{
+    clear: both;
+    margin: 5px;
+    border-bottom-color: olive;
+    border-bottom-style: dotted;
+    padding-bottom: 10px;
+}
+
+
+.addComment{
+    background-color: green;
+    display: inline-block;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 3px;
+
 }

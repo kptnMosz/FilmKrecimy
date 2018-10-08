@@ -17,10 +17,17 @@
             <form method="post" th:object="${movie}">
                 <input type="text">
                 <input th:if="${editable}" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                <input type="hidden" id="movieId" th:value="*{id}" />
                 <input th:if="${editable}" type="submit"/>
             </form>
         </td>
     </tr>
 </table>
+<div class="moviePost">
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" th:src="@{/views/js/movieDetails.js}"></script>
 </body>
 </html>
