@@ -7,9 +7,11 @@ import pl.wojtektrzos.filmkrecimy.entity.User;
 import pl.wojtektrzos.filmkrecimy.entity.UserDetails;
 
 import javax.transaction.Transactional;
+import java.util.Set;
 
 @Repository
 @Transactional
 public interface UserDetailsRepository extends JpaRepository<UserDetails, Long> {
 UserDetails findUserDetailsByLogInfo(User user);
+UserDetails findUserDetailsById(long id);
 }

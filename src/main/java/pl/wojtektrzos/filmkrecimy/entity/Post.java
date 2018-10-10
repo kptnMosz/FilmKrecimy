@@ -20,6 +20,6 @@ public class Post {
     private String text;
     private LocalDateTime created;
     @ManyToOne
-    private User author;
+    private UserDetails author;
 
 }

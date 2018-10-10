@@ -13,6 +13,7 @@ import pl.wojtektrzos.filmkrecimy.repository.MovieRepository;
 import pl.wojtektrzos.filmkrecimy.repository.PostRepository;
 import pl.wojtektrzos.filmkrecimy.service.CurrentUser;
 import pl.wojtektrzos.filmkrecimy.service.PostService;
+import pl.wojtektrzos.filmkrecimy.util.EnterLog;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
@@ -33,7 +34,7 @@ public class PostController {
     @PostMapping("/moviePost")
     @ResponseBody
     public void addPostForMovie(Model model, @AuthenticationPrincipal CurrentUser currentUser, HttpServletRequest req, @RequestParam String postContent,@RequestParam Long movieId) {
-        postService.addNewPostForMovie(postContent.toString(), currentUser.getUser(), movieRepository.getOne(movieId));
+        postService.addNewPostForMovie(postContent.toString(), currentUser.getUser().getDetails(), movieRepository.getOne(movieId));
     }
 
     @Secured("ROLE_USER")
@@ -42,6 +43,21 @@ public class PostController {
     public List<PostDto> getAllPostsForMovie(@PathVariable long movieId){
         List posts = postService.getPostsForMovie(movieId);
         return posts;
+    }
+
+    @Secured("ROLE_USER")
+    @GetMapping("/getAllPostsForUser/{userId}")
+    @ResponseBody
+    public List<PostDto> getAllPostsForUser(@PathVariable long userId){
+        List<PostDto> posts = postService.getPostsForUser(userId);
+        return posts;
+    }
+
+    @Secured("ROLE_USER")
+    @PostMapping("/wallPost")
+    @ResponseBody
+    public void addPostForUser(Model model, @AuthenticationPrincipal CurrentUser currentUser, HttpServletRequest req, @RequestParam String postContent) {
+        postService.addNewPostForUser(postContent.toString(), currentUser.getUser().getDetails());
     }
 
 }

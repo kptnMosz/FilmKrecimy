@@ -30,4 +30,5 @@ public class UserDetails {
     @Email
     private String email;
 
+
 }

@@ -164,6 +164,14 @@ public class UserController {
         avatarService.placeAvatarFotoInOutput(resp,request,planItemRepository.findPlanItemById(planItemId));
     }
 
+    @GetMapping("/showWall")
+    @Secured("ROLE_USER")
+    public String showWall(Model model, @AuthenticationPrincipal CurrentUser currentUser)
+    {
+        model.addAttribute("user", currentUser.getUser().getDetails());
+        return "views/user/wall";
+    }
+
 
 
 
